@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLomi | Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1codelomi.png" type="image/png" sizes="32x32">
+    <meta name="description" content="CodexAether Ana Sayfa">
+</head>
+<body class="site-body">
+    <header class="site-header">
+        <h2 class="site-title"><i>CodeLomi</i></h2> 
+        <nav class="main-navigation">
+            <a class="nav-link" href="index.html"><button class="nav-button">Ana Sayfa</button></a>
+            <a class="nav-link" href="blog.html"><button class="nav-button">Blog</button></a>
+            <a class="nav-link" href="hakimizda.html"><button class="nav-button">Hakkımızda</button></a>
+            <a class="nav-link" href="form.html"><button class="nav-button">Bize Ulaşın</button></a>
+        </nav>
+    </header>
+    
+    <hr class="divider">
+    
+    <main class="main-content">
+
+<!-- Anasayfa Giriş Bloğu -->
+<div class="hero">
+  <h1>Selam! 😎</h1>
+  <div class="hero-text">
+    <p>Burası <strong>codelomi.xyz</strong> – kodlama, öğrenme ve kafama estiği gibi paylaştığım mini fikirlerle dolu bir alan. Burada kendimi geliştirirken öğrendiğim her şeyi paylaşıyorum ve belki bir gün senin de işine yarar diye buraya kaydediyorum.</p>
+
+    <p>Python projelerimden C dili denemelerine, siber güvenlik notlarımdan kısa blog yazılarıma kadar farklı içerikler bulabilirsin. Kodlama yolculuğum sırasında öğrendiğim püf noktalarını, denemelerimi ve bazen hatalarımı da burada görebileceksin.</p>
+
+    <p>Ama merak etme, sıkıcı değil! 🚀 Kahveni al, rahatla ve biraz dolaş. Bazen bir satır kod, bazen bir mini proje ya da bir düşünce seni burada bekliyor olacak. Her paragraf sana ufak bir ilham kaynağı olacak, merakını tetikleyecek ve belki yeni bir şeyler öğrenmeni sağlayacak.</p>
+
+    <p>Amacım basit: kendi öğrenme yolculuğumu paylaşmak, öğrendiklerimi unutmamak ve belki bir gün senin de işine yarayacak bir şeyler bırakmak. Bu site, hem bir günlüğüm hem de keşfetmek isteyen herkes için küçük bir rehber olacak.</p>
+
+    <p>Okurken sıkılırsan sorun değil → kahveni yudumla ☕ Ben de yazarken öyle yapıyorum zaten. Ama hazır buradasan biraz zaman ayır ve metinleri kaydır, çünkü burada göreceğin her satır biraz daha seni içine çekecek.</p>
+
+    <p>Burada göreceğin şeyler teknik notlardan mini projelere kadar çeşitlenecek. Bazen bir Python kodu, bazen bir C denemesi, bazen de siber güvenlikte yeni öğrendiğim bir şey. Her paragraf seni biraz daha derinlemesine bilgiye götürecek, merakını artıracak ve belki bir sonraki projene ilham olacak.</p>
+
+    <p>Kısacası burası hem benim gelişim günlüğüm hem de denk gelirse senin de öğrenmene faydalı olabilecek bir alan. İstersen hemen keşfetmeye başla, kaydır ve kod dünyasına adım at! 🚀</p>
+  </div>
+</div>
+
+<style>
+.hero {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
+  color: #f0f0f0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* sadece hafif gölge */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 2;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.8s ease-out;
+  margin-bottom: 25px;
+}
+
+.hero-text p.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hero strong {
+  color: #00d8ff;
+}
+</style>
+
+<script>
+// Scroll animasyonu için JS
+const paragraphs = document.querySelectorAll('.hero-text p');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  paragraphs.forEach(p => {
+    const elementTop = p.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      p.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+        
+    </main>
+
+
+    
+    <hr class="divider">
+    <footer class="site-footer">
+        <p class="footer-text">© 2025 - Telif Hakları <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.</p>
+    </footer>
+</body>
+</html>

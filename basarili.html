@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLomi | Başarıyla Gönderildi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="1codelomi.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-body">
+    <header class="site-header">
+        <h2 class="site-title"><i>CodeLomi</i></h2>
+        <nav class="main-navigation">
+            <a class="nav-link" href="index.html"><button class="nav-button">Ana Sayfa</button></a>
+            <a class="nav-link" href="blog.html"><button class="nav-button">Blog</button></a>
+            <a class="nav-link" href="hakimizda.html"><button class="nav-button">Hakkımızda</button></a>
+            <a class="nav-link" href="form.html"><button class="nav-button">Bize Ulaşın</button></a>
+        </nav>
+    </header>
+    
+    <hr class="divider">
+    
+    <main class="main-content">
+        <div class="success-animation">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        
+        <div class="success-message">
+            <h2 class="success-title">Formunuz Başarıyla Gönderildi!</h2>
+            <p class="success-text">Mesajınız moderatörlerimize ulaştı. En kısa sürede incelenip size geri dönüş yapılacaktır. İlginiz için teşekkür ederiz.</p>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="form.html" class="action-button">
+                <i class="fas fa-arrow-left"></i> Forma Geri Dön
+            </a>
+            <a href="index.html" class="action-button">
+                <i class="fas fa-home"></i> Anasayfaya Dön
+            </a>
+        </div>
+    </main>
+    
+     <hr class="divider">
+    <footer class="site-footer">
+        <p class="footer-text">© 2025 - Telif Hakları <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.</p>
+    </footer>
+
+    <script>
+        // Küçük bir interaktiflik ekleyelim
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.action-button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Butona tıklandığında hafif bir efekt ekle
+                    this.style.transform = 'scale(0.95)';
+                    
+                    // Yönlendirmeden önce kısa bir gecikme
+                    setTimeout(() => {
+                        window.location.href = this.getAttribute('href');
+                    }, 200);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
