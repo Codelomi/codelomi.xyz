@@ -36,6 +36,11 @@ body.dark {
   background: #121212;
   color: white;
 }
+
+        body.dark main {
+  background: #1e1e1e;
+  color: white;
+}
         
         /* HEADER STİLLERİ */
         .site-header {
@@ -1156,4 +1161,5 @@ body.dark {
         line-height: 35px;
     }
 }
+
 
