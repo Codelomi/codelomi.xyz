@@ -1,4 +1,3 @@
-// theme.js
 const button = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -13,7 +12,7 @@ button.addEventListener("click", () => {
   }
 });
 
-// Sayfa açılınca önceki seçimi hatırla
+// Sayfa açıldığında eski tercihi yükle
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
   button.textContent = "☀️ Light Mode";
