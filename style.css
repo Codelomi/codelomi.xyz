@@ -29,6 +29,13 @@
             display: flex;
             flex-direction: column;
         }
+
+
+                /* Karanlık tema */
+body.dark {
+  background: #121212;
+  color: white;
+}
         
         /* HEADER STİLLERİ */
         .site-header {
@@ -1149,3 +1156,4 @@
         line-height: 35px;
     }
 }
+
