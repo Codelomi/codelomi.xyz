@@ -67,6 +67,14 @@ body.dark {
             -webkit-text-fill-color: transparent;
             filter: blur(0.8px);
         }
+
+        .site-title i:hover{
+            background: linear-gradient(90deg, #07ff7f, #52e4d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: blur(0.8px);
+            transition: all 10s ease;
+        }
         
         .main-navigation {
             display: flex;
@@ -1163,6 +1171,7 @@ body.dark {
         line-height: 35px;
     }
 }
+
 
 
 
