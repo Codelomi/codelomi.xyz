@@ -4,7 +4,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary-color: #3498db;
             --secondary-color: #2ecc71;
@@ -15,7 +15,7 @@
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-        
+
         body {
             margin: auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,29 +31,29 @@
         }
 
 
-                /* Karanlık tema */
-body.dark {
-  background: #121212;
-  color: white;
-}
+        /* Karanlık tema */
+        body.dark {
+            background: #121212;
+            color: white;
+        }
 
         body.dark main {
-  background: #1e1e1e;
-  color: white;
-}
-        
+            background: #1e1e1e;
+            color: white;
+        }
+
         /* HEADER STİLLERİ */
         .site-header {
             text-align: center;
             padding: 25px 0;
-            background: linear-gradient(to right, var(--dark-color),#4a6491);
+            background: linear-gradient(to right, var(--dark-color), #4a6491);
             border-radius: 10px;
             box-shadow: var(--shadow);
             margin-bottom: 20px;
             color: white;
             position: relative;
         }
-        
+
         .site-title i {
             font-size: 2.8rem;
             margin-bottom: 10px;
@@ -68,27 +68,27 @@ body.dark {
             filter: blur(0.8px);
         }
 
-        .site-title i:hover{
+        .site-title i:hover {
             background: linear-gradient(90deg, #07ff7f, #52e4d6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: blur(0.8px);
             transition: all 10s ease;
         }
-        
+
         .main-navigation {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
             align-items: center;
-            margin-top: 0;                  
+            margin-top: 0;
         }
-        
+
         .nav-link {
             text-decoration: none;
         }
-        
+
         .nav-button {
             padding: 12px 25px;
             background: rgba(255, 255, 255, 0.15);
@@ -101,19 +101,19 @@ body.dark {
             backdrop-filter: blur(5px);
             font-size: 1rem;
         }
-        
+
         .nav-button:hover {
             background: rgba(247, 245, 245, 0);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, rgba(0,0,0,0.2), transparent);
+            background: linear-gradient(to right, transparent, rgba(0, 255, 38, 0.601), transparent);
             margin: 25px 0;
         }
-        
+
         /* ANA İÇERİK STİLLERİ */
         .main-content {
             flex: 1;
@@ -123,26 +123,26 @@ body.dark {
             box-shadow: var(--shadow);
             margin-bottom: 25px;
         }
-        
+
         /* Hoş Geldiniz Bölümü */
         .welcome-container {
             text-align: center;
             padding: 40px 20px;
         }
-        
+
         .welcome-title {
             font-size: 2.5rem;
             color: var(--dark-color);
             margin-bottom: 15px;
             font-weight: 700;
         }
-        
+
         .welcome-subtitle {
             font-size: 1.3rem;
             color: #000000;
             margin-bottom: 30px;
         }
-        
+
         .features {
             display: flex;
             justify-content: center;
@@ -150,7 +150,7 @@ body.dark {
             flex-wrap: wrap;
             margin-top: 40px;
         }
-        
+
         .feature {
             background: var(--light-color);
             padding: 25px;
@@ -160,42 +160,42 @@ body.dark {
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
-        
+
         .feature:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         .feature i {
             font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 15px;
         }
-        
+
         .feature h3 {
             color: var(--dark-color);
             margin-bottom: 10px;
         }
-        
+
         /* Blog Bölümü */
         .blog-content {
             text-align: center;
             padding: 30px 20px;
         }
-        
+
         .blog-welcome {
             font-size: 2.2rem;
             color: var(--dark-color);
             margin-bottom: 3px;
         }
-        
+
         .blog-text {
             font-size: 1.2rem;
             color: #7f8c8d;
             margin-bottom: 30px;
         }
-        
-        .coming-soon { 
+
+        .coming-soon {
             background: var(--light-color);
             padding: 30px;
             border-radius: 10px;
@@ -204,25 +204,26 @@ body.dark {
             text-align: center;
             box-shadow: var(--shadow);
         }
-        
+
         /* Form Bölümü */
         .contact-form {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         .form-label {
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
             color: var(--dark-color);
         }
-        
-        .form-input, .form-textarea {
+
+        .form-input,
+        .form-textarea {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #ddd;
@@ -230,36 +231,37 @@ body.dark {
             font-size: 1rem;
             transition: var(--transition);
         }
-        
-        .form-input:focus, .form-textarea:focus {
+
+        .form-input:focus,
+        .form-textarea:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
         }
-        
+
         .radio-group {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
-        
+
         .radio-label {
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
         }
-        
+
         .form-file {
             margin-top: 8px;
         }
-        
+
         .file-info {
             font-size: 0.9rem;
             color: #7f8c8d;
             margin-top: 5px;
         }
-        
+
         .form-actions {
             display: flex;
             gap: 15px;
@@ -267,7 +269,7 @@ body.dark {
             margin-top: 30px;
             flex-wrap: wrap;
         }
-        
+
         .form-button {
             padding: 14px 28px;
             border: none;
@@ -280,58 +282,58 @@ body.dark {
             font-size: 1rem;
             box-shadow: var(--shadow);
         }
-        
+
         .reset-button {
             background-color: #f44336;
             color: white;
         }
-        
+
         .reset-button:hover {
             background-color: #d32f2f;
             transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(0,0,0,0.15);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
         }
-        
+
         .submit-button {
             background-color: var(--secondary-color);
             color: white;
         }
-        
+
         .submit-button:hover {
             background-color: #27ae60;
             transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(0,0,0,0.15);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
         }
-        
+
         .back-button {
             background-color: var(--primary-color);
             color: white;
             display: inline-block;
             line-height: normal;
         }
-        
+
         .back-button:hover {
             background-color: #2980b9;
             transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(0,0,0,0.15);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
         }
-        
+
         /* Hakkımızda Bölümü */
         .about-content {
             text-align: center;
             padding: 30px 20px;
         }
-        
+
         .vurgulu {
             font: 700 clamp(24px, 4vw, 42px)/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
             margin: 30px 0;
             text-align: center;
         }
-        
-        .vurgulu i { 
-            font-style: italic; 
+
+        .vurgulu i {
+            font-style: italic;
         }
-        
+
         .vurgulu mark {
             position: relative;
             padding: .08em .25em;
@@ -340,36 +342,49 @@ body.dark {
             background-size: 0% 100%;
             animation:
                 pop-in .35s ease-out both,
-                sweep .9s cubic-bezier(.2,.7,.2,1) .15s forwards,
+                sweep .9s cubic-bezier(.2, .7, .2, 1) .15s forwards,
                 underline .6s ease .9s forwards;
         }
-        
+
         /* Alt çizgi */
         .vurgulu mark::after {
             content: "";
             position: absolute;
-            left: 0; right: 0; bottom: -.14em;
+            left: 0;
+            right: 0;
+            bottom: -.14em;
             height: 2px;
             background: currentColor;
             opacity: .55;
             transform: scaleX(0);
             transform-origin: left;
         }
-        
+
         /* Keyframes */
         @keyframes pop-in {
-            from { transform: translateY(.35em); opacity: 0; }
-            to   { transform: translateY(0);      opacity: 1; }
+            from {
+                transform: translateY(.35em);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
-        
+
         @keyframes sweep {
-            to { background-size: 100% 100%; }
+            to {
+                background-size: 100% 100%;
+            }
         }
-        
+
         @keyframes underline {
-            to { transform: scaleX(1); }
+            to {
+                transform: scaleX(1);
+            }
         }
-        
+
         .services {
             display: flex;
             justify-content: center;
@@ -377,7 +392,7 @@ body.dark {
             flex-wrap: wrap;
             margin: 50px 0;
         }
-        
+
         .service {
             background: white;
             padding: 30px;
@@ -387,24 +402,24 @@ body.dark {
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
-        
+
         .service:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         .service i {
             font-size: 3rem;
             color: var(--primary-color);
             margin-bottom: 20px;
         }
-        
+
         .service h3 {
             color: var(--dark-color);
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
-        
+
         /* FOOTER STİLLERİ */
         .site-footer {
             text-align: center;
@@ -414,30 +429,30 @@ body.dark {
             border-radius: 8px;
             box-shadow: var(--shadow);
         }
-        
+
         .footer-text {
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
-        
+
         .footer-link {
             color: var(--primary-color);
             text-decoration: none;
             transition: var(--transition);
             font-weight: bold;
         }
-        
+
         .footer-link:hover {
             color: var(--secondary-color);
             text-decoration: underline;
         }
-        
+
         /* BAŞARILI SAYFASI STİLLERİ */
         .success-animation {
             margin-bottom: 30px;
             text-align: center;
         }
-        
+
         .checkmark {
             width: 80px;
             height: 80px;
@@ -450,7 +465,7 @@ body.dark {
             animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
             margin: 0 auto;
         }
-        
+
         .checkmark-circle {
             stroke-dasharray: 166;
             stroke-dashoffset: 166;
@@ -460,25 +475,25 @@ body.dark {
             fill: none;
             animation: stroke .6s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
         }
-        
+
         .checkmark-check {
             transform-origin: 50% 50%;
             stroke-dasharray: 48;
             stroke-dashoffset: 48;
             animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .8s forwards;
         }
-        
+
         .success-message {
             margin-bottom: 40px;
             text-align: center;
         }
-        
+
         .success-title {
             font-size: 2.2rem;
             color: var(--dark-color);
             margin-bottom: 15px;
         }
-        
+
         .success-text {
             font-size: 1.2rem;
             color: #7f8c8d;
@@ -486,14 +501,14 @@ body.dark {
             line-height: 1.5;
             margin: 0 auto;
         }
-        
+
         .action-buttons {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
         }
-        
+
         .action-button {
             padding: 14px 28px;
             border-radius: 8px;
@@ -504,306 +519,322 @@ body.dark {
             align-items: center;
             gap: 10px;
         }
-        
+
         .action-button:first-child {
             background: var(--primary-color);
             color: white;
             box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
         }
-        
+
         .action-button:last-child {
             background: var(--secondary-color);
             color: white;
             box-shadow: 0 4px 6px rgba(46, 204, 113, 0.3);
         }
-        
+
         .action-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(0,0,0,0.2);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Animations */
         @keyframes stroke {
             100% {
                 stroke-dashoffset: 0;
             }
         }
-        
+
         @keyframes scale {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: none;
             }
+
             50% {
                 transform: scale3d(1.1, 1.1, 1);
             }
         }
-        
+
         @keyframes fill {
             100% {
                 box-shadow: 0 0 20px var(--secondary-color);
             }
         }
-        
+
         /* RESPONSIVE TASARIM */
         @media (max-width: 768px) {
             body {
                 padding: 15px;
             }
-            
+
             .site-title {
                 font-size: 2.2rem;
             }
-            
+
             .main-navigation {
                 flex-direction: column;
                 gap: 12px;
                 align-items: center;
             }
-            
+
             .nav-button {
                 width: 100%;
                 max-width: 220px;
                 padding: 14px;
             }
-            
+
             .main-content {
                 padding: 30px 20px;
             }
-            
-            .welcome-title, .blog-welcome, .success-title {
+
+            .welcome-title,
+            .blog-welcome,
+            .success-title {
                 font-size: 1.9rem;
             }
-            
-            .welcome-subtitle, .blog-text, .success-text {
+
+            .welcome-subtitle,
+            .blog-text,
+            .success-text {
                 font-size: 1.1rem;
             }
-            
-            .features, .services {
+
+            .features,
+            .services {
                 gap: 20px;
             }
-            
-            .feature, .service {
+
+            .feature,
+            .service {
                 width: 100%;
                 max-width: 320px;
             }
-            
-            .form-actions, .action-buttons {
+
+            .form-actions,
+            .action-buttons {
                 flex-direction: column;
                 width: 100%;
             }
-            
-            .form-button, .action-button {
+
+            .form-button,
+            .action-button {
                 width: 100%;
                 justify-content: center;
             }
-            
+
             .radio-group {
                 flex-direction: column;
                 gap: 10px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .main-content {
                 padding: 20px 15px;
             }
-            
-            .welcome-title, .blog-welcome, .success-title {
+
+            .welcome-title,
+            .blog-welcome,
+            .success-title {
                 font-size: 1.7rem;
             }
-            
+
             .checkmark {
                 width: 65px;
                 height: 65px;
             }
-            
-            .feature, .service {
+
+            .feature,
+            .service {
                 padding: 20px;
             }
-            
-            .feature i, .service i {
+
+            .feature i,
+            .service i {
                 font-size: 2.2rem;
             }
         }
-        
+
         /* Selection stilleri */
         ::selection {
             background-color: rgba(236, 93, 93, 0.8);
             color: #000;
             text-shadow: none;
         }
-        
+
         ::-moz-selection {
             background-color: rgba(237, 115, 115, 0.8);
             color: #000;
             text-shadow: none;
         }
 
-        /* From Uiverse.io by SpatexDEV */ 
+        /* From Uiverse.io by SpatexDEV */
         button {
-          border: none;
-          display: flex;
-          padding: 0.75rem 1.5rem;
-          background-color: #488aec;
-          color: #ffffff;
-          font-size: 0.75rem;
-          line-height: 1rem;
-          font-weight: 700;
-          text-align: center;
-          cursor: pointer;
-          text-transform: uppercase;
-          vertical-align: middle;
-          align-items: center;
-          border-radius: 0.5rem;
-          user-select: none;
-          gap: 0.75rem;
-          box-shadow:
-            0 4px 6px -1px #488aec31,
-            0 2px 4px -1px #488aec17;
-          transition: all 0.6s ease;
+            border: none;
+            display: flex;
+            padding: 0.75rem 1.5rem;
+            background-color: #488aec;
+            color: #ffffff;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            text-transform: uppercase;
+            vertical-align: middle;
+            align-items: center;
+            border-radius: 0.5rem;
+            user-select: none;
+            gap: 0.75rem;
+            box-shadow:
+                0 4px 6px -1px #488aec31,
+                0 2px 4px -1px #488aec17;
+            transition: all 0.6s ease;
         }
 
         button:hover {
-          box-shadow:
-            0 10px 15px -3px #488aec4f,
-            0 4px 6px -2px #488aec17;
+            box-shadow:
+                0 10px 15px -3px #488aec4f,
+                0 4px 6px -2px #488aec17;
         }
 
         button:focus,
         button:active {
-          opacity: 0.85;
-          box-shadow: none;
+            opacity: 0.85;
+            box-shadow: none;
         }
 
         button svg {
-          width: 1.25rem;
-          height: 1.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
         }
 
-        /* From Uiverse.io by 3bdel3ziz-T */ 
+        /* From Uiverse.io by 3bdel3ziz-T */
         .container {
-          --transition: 350ms;
-          --folder-W: 120px;
-          --folder-H: 80px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-end;
-          padding: 10px;
-          background: linear-gradient(135deg, #6dd5ed, #2193b0);
-          border-radius: 15px;
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-          height: calc(var(--folder-H) * 1.7);
-          position: relative;
+            --transition: 350ms;
+            --folder-W: 120px;
+            --folder-H: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            height: calc(var(--folder-H) * 1.7);
+            position: relative;
         }
 
         .folder {
-          position: absolute;
-          top: -20px;
-          left: calc(50% - 60px);
-          animation: float 2.5s infinite ease-in-out;
-          transition: transform var(--transition) ease;
+            position: absolute;
+            top: -20px;
+            left: calc(50% - 60px);
+            animation: float 2.5s infinite ease-in-out;
+            transition: transform var(--transition) ease;
         }
 
         .folder:hover {
-          transform: scale(1.05);
+            transform: scale(1.05);
         }
 
         .folder .front-side,
         .folder .back-side {
-          position: absolute;
-          transition: transform var(--transition);
-          transform-origin: bottom center;
+            position: absolute;
+            transition: transform var(--transition);
+            transform-origin: bottom center;
         }
 
         .folder .back-side::before,
         .folder .back-side::after {
-          content: "";
-          display: block;
-          background-color: white;
-          opacity: 0.5;
-          z-index: 0;
-          width: var(--folder-W);
-          height: var(--folder-H);
-          position: absolute;
-          transform-origin: bottom center;
-          border-radius: 15px;
-          transition: transform 350ms;
-          z-index: 0;
+            content: "";
+            display: block;
+            background-color: white;
+            opacity: 0.5;
+            z-index: 0;
+            width: var(--folder-W);
+            height: var(--folder-H);
+            position: absolute;
+            transform-origin: bottom center;
+            border-radius: 15px;
+            transition: transform 350ms;
+            z-index: 0;
         }
 
         .container:hover .back-side::before {
-          transform: rotateX(-5deg) skewX(5deg);
+            transform: rotateX(-5deg) skewX(5deg);
         }
+
         .container:hover .back-side::after {
-          transform: rotateX(-15deg) skewX(12deg);
+            transform: rotateX(-15deg) skewX(12deg);
         }
 
         .folder .front-side {
-          z-index: 1;
+            z-index: 1;
         }
 
         .container:hover .front-side {
-          transform: rotateX(-40deg) skewX(15deg);
+            transform: rotateX(-40deg) skewX(15deg);
         }
 
         .folder .tip {
-          background: linear-gradient(135deg, #ff9a56, #ff6f56);
-          width: 80px;
-          height: 20px;
-          border-radius: 12px 12px 0 0;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-          position: absolute;
-          top: -10px;
-          z-index: 2;
+            background: linear-gradient(135deg, #ff9a56, #ff6f56);
+            width: 80px;
+            height: 20px;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: -10px;
+            z-index: 2;
         }
 
         .folder .cover {
-          background: linear-gradient(135deg, #ffe563, #ffc663);
-          width: var(--folder-W);
-          height: var(--folder-H);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-          border-radius: 10px;
+            background: linear-gradient(135deg, #ffe563, #ffc663);
+            width: var(--folder-W);
+            height: var(--folder-H);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
         }
 
         .custom-file-upload {
-          font-size: 1.1em;
-          color: #ffffff;
-          text-align: center;
-          background: rgba(255, 255, 255, 0.2);
-          border: none;
-          border-radius: 10px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-          cursor: pointer;
-          transition: background var(--transition) ease;
-          display: inline-block;
-          width: 100%;
-          padding: 10px 35px;
-          position: relative;
+            font-size: 1.1em;
+            color: #ffffff;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background var(--transition) ease;
+            display: inline-block;
+            width: 100%;
+            padding: 10px 35px;
+            position: relative;
         }
 
         .custom-file-upload:hover {
-          background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.4);
         }
 
         .custom-file-upload input[type="file"] {
-          display: none;
+            display: none;
         }
 
         @keyframes float {
-          0% {
-            transform: translateY(0px);
-          }
+            0% {
+                transform: translateY(0px);
+            }
 
-          50% {
-            transform: translateY(-20px);
-          }
+            50% {
+                transform: translateY(-20px);
+            }
 
-          100% {
-            transform: translateY(0px);
-          }
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         /* DÜZELTME: Buton hizalama sorunu çözümü */
         .yazi-1 {
             display: block;
@@ -816,24 +847,24 @@ body.dark {
             padding: 0 20px;
             box-shadow: var(--shadow);
             position: relative;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-        height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
         }
 
         .anametin {
             color: #ffffff;
             transition: all 0.3s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             margin: 0;
         }
 
         .anametin1 {
             color: #5e4848;
             transition: all 0.3s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             margin: 0;
         }
 
@@ -845,17 +876,21 @@ body.dark {
         .bmw {
             border: 1px solid white;
             border-radius: 15px;
-            padding: 10px 20px;
+            padding: 5px 5px;
             margin: 0;
-            position: absolute;   /* Konumlandırma */
-            bottom: -20px;        /* Aşağıya taşır */
-            right: 20px;          /* Sağdan hizala */
-            background: #488aec;  /* Butonun rengi */
-}
+            position: absolute;
+            /* Konumlandırma */
+            bottom: -15px;
+            /* Aşağıya taşır */
+            right: 20px;
+            /* Sağdan hizala */
+            background: #488aec;
+            /* Butonun rengi */
+        }
 
         .bmw:hover {
             padding: 12px;
-        } 
+        }
 
         .next {
             text-decoration: none;
@@ -864,95 +899,97 @@ body.dark {
         }
 
         .card1 {
-        width: 240px;
-        height: 390px;
-        margin: 0 auto;
-        background-color: #24233b;
-        border-radius: 8px;
-        z-index: 1;
-        box-shadow: 0px 10px 10px rgb(73, 70, 92);
-        transition: 0.5s;
+            width: 240px;
+            height: 390px;
+            margin: 0 auto;
+            background-color: #24233b;
+            border-radius: 8px;
+            z-index: 1;
+            box-shadow: 0px 10px 10px rgb(73, 70, 92);
+            transition: 0.5s;
         }
 
         .card1:hover {
-        transform: translateY(-7px);
-        box-shadow: 0px 10px 10px black;
-        } 
+            transform: translateY(-7px);
+            box-shadow: 0px 10px 10px black;
+        }
 
         .card {
-        width: 200px;
-        height: 260px;
-        margin: 0 auto;
-        background-color: #24233b;
-        border-radius: 8px;
-        z-index: 1;
-        box-shadow: 0px 10px 10px rgb(73, 70, 92);
-        transition: 0.5s;
+            width: 200px;
+            height: 260px;
+            margin: 0 auto;
+            background-color: #24233b;
+            border-radius: 8px;
+            z-index: 1;
+            box-shadow: 0px 10px 10px rgb(73, 70, 92);
+            transition: 0.5s;
         }
 
         .card:hover {
-        transform: translateY(-7px);
-        box-shadow: 0px 10px 10px black;
+            transform: translateY(-7px);
+            box-shadow: 0px 10px 10px black;
         }
 
         .top {
-          display: flex;
-          align-items: center;
-          padding-left: 10px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
         }
 
         .circle {
-          padding: 0 4px;
+            padding: 0 4px;
         }
 
         .circle2 {
-          display: inline-block;
-          align-items: center;
-          width: 10px;
-          height: 10px;
-          padding: 1px;
-          border-radius: 5px;
+            display: inline-block;
+            align-items: center;
+            width: 10px;
+            height: 10px;
+            padding: 1px;
+            border-radius: 5px;
         }
 
         .red {
-          background-color: #ff605c;
+            background-color: #ff605c;
         }
 
         .yellow {
-          background-color: #ffbd44;
+            background-color: #ffbd44;
         }
 
         .green {
-          background-color: #00ca4e;
+            background-color: #00ca4e;
         }
 
         .header {
-          margin: 5px;
-          margin-top: 5px;
-          border-radius: 5px;
+            margin: 5px;
+            margin-top: 5px;
+            border-radius: 5px;
         }
 
         #title2 {
-          color: white;
-          padding-left: 15px;
-          font-size: 15px;
+            color: white;
+            padding-left: 15px;
+            font-size: 15px;
         }
 
         .code-container {
-          text-align: center;
+            text-align: center;
         }
+
         #code {
-          width: 150px;
-          height: 170px;
-          resize: none;
-          background-color: rgb(73, 70, 92);
-          border-radius: 5px;
-          border: none;
-          color: white;
-          padding: 10px;
+            width: 150px;
+            height: 170px;
+            resize: none;
+            background-color: rgb(73, 70, 92);
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 10px;
         }
+
         #code:focus {
-          outline: none !important;
+            outline: none !important;
         }
 
         #code1 {
@@ -974,7 +1011,7 @@ body.dark {
             margin-left: 15px;
             padding: 1px;
             height: 30px;
-            padding-left:10px ;
+            padding-left: 10px;
         }
 
 
@@ -989,191 +1026,250 @@ body.dark {
 
 
         .video-container {
-  position: relative;
-  width: 600px;
-  margin: 0 auto;   /* Ortalamak için */
-  padding-bottom: 40.0%; /* ?:?  oranı */
-  height: 315px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
-}
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+            /* Ortalamak için */
+            padding-bottom: 40.0%;
+            /* ?:?  oranı */
+            height: 315px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+        }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-.p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 1.5rem;
-}
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
 
 
-.yol {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%;
-        height: auto;
-    }
+        .p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
 
 
 
-/* ----------------------------- */
-/* GENEL YAZI VE TEMEL AYARLAR  */
-/* ----------------------------- */
-.site-body h1, .site-body h2, .site-body h3, .site-body h4, 
-.site-body h5, .site-body h6, .site-body p, .site-body button{
-    color: #3add5b; /* Neon mavi */
-    text-shadow: 0 0 2px rgba(100, 255, 141, 0.653); /* Hafif glow, okunabilirlik arttı */
-    font-family: 'Fira Code', monospace;
-    transition: all 0.3s ease-in-out;
-}
-
-/* ----------------------------- */
-/* YOL HARİTASI KONTEYNERİ      */
-/* ----------------------------- */
-.roadmap-container {
-    margin-top: 60px;
-    padding-left: 60px;
-    border-left: 3px solid #00c6ff;
-    position: relative;
-}
-
-/* ----------------------------- */
-/* YOL HARİTASI BAŞLIĞI         */
-/* ----------------------------- */
-.roadmap-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: #64ff9a;
-    text-shadow: 0 0 3px rgba(0, 198, 255, 0.5); /* Glow azaltıldı */
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-/* ----------------------------- */
-/* YOL HARİTASI ADIMLARI        */
-/* ----------------------------- */
-.road {
-    position: relative;
-}
-
-.step {
-    position: relative;
-    margin-bottom: 80px;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInStep 1s forwards;
-}
-
-.step:nth-child(1) { animation-delay: 0.3s; }
-.step:nth-child(2) { animation-delay: 0.6s; }
-.step:nth-child(3) { animation-delay: 0.9s; }
-.step:nth-child(4) { animation-delay: 1.2s; }
-.step:nth-child(5) { animation-delay: 1.5s; }
-.step:nth-child(6) { animation-delay: 1.8s; }
-.step:nth-child(7) { animation-delay: 2.1s; }
-.step:nth-child(8) { animation-delay: 2.4s; }
-
-@keyframes fadeInStep {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* ----------------------------- */
-/* ADIM NUMARALARI               */
-/* ----------------------------- */
-.step .circle {
-    position: absolute;
-    left: -45px;
-    top: 0;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #64ffbc, #00ffa6);
-    border-radius: 50%;
-    color: #143260;
-    text-align: center;
-    line-height: 40px;
-    font-weight: bold;
-    font-family: 'Fira Code', monospace;
-    box-shadow: 0 0 8px rgba(100, 255, 218, 0.5), 0 0 12px rgba(0, 198, 255, 0.4) inset; /* Glow azaltıldı */
-    transition: all 0.3s ease-in-out;
-}
-
-.step .circle:hover {
-    transform: scale(1.3);
-    box-shadow: 0 0 15px rgba(100, 255, 218, 0.6), 0 0 20px rgba(0, 198, 255, 0.5) inset;
-}
-
-/* ----------------------------- */
-/* ADIM BAŞLIĞI VE AÇIKLAMASI    */
-/* ----------------------------- */
-.step h3 {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    color: #64ffda;
-    text-shadow: 0 0 2px rgba(0, 198, 255, 0.4); /* Glow minimum, okunabilir */
-}
-
-.step p {
-    font-size: 1.1rem;
-    color: #64ffda; /* Daha kontrastlı ve okunabilir */
-    line-height: 1.7;
-    margin-left: 12px;
-}
-
-/* ----------------------------- */
-/* YOL ÇİZGİSİ                   */
-/* ----------------------------- */
-.road::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -42px;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(to bottom, #64ffda, #00c6ff);
-    border-radius: 4px;
-    box-shadow: 0 0 6px rgba(100, 255, 218, 0.5), 0 0 10px rgba(0, 198, 255, 0.4); /* Glow azaltıldı */
-}
-
-/* ----------------------------- */
-/* RESPONSIVE                     */
-/* ----------------------------- */
-@media(max-width:768px){
-    .roadmap-container {
-        padding-left: 30px;
-    }
-    .step .circle {
-        left: -35px;
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-    }
-}
+        .yol {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+        }
 
 
 
+        /* ----------------------------- */
+        /* GENEL YAZI VE TEMEL AYARLAR  */
+        /* ----------------------------- */
+        .site-body h1,
+        .site-body h2,
+        .site-body h3,
+        .site-body h4,
+        .site-body h5,
+        .site-body h6,
+        .site-body p,
+        .site-body button {
+            color: #3add5b;
+            /* Neon mavi */
+            text-shadow: 0 0 2px rgba(100, 255, 141, 0.653);
+            /* Hafif glow, okunabilirlik arttı */
+            font-family: 'Fira Code', monospace;
+            transition: all 0.3s ease-in-out;
+        }
 
+        /* ----------------------------- */
+        /* YOL HARİTASI KONTEYNERİ      */
+        /* ----------------------------- */
+        .roadmap-container {
+            margin-top: 60px;
+            padding-left: 60px;
+            border-left: 3px solid #00c6ff;
+            position: relative;
+        }
 
+        /* ----------------------------- */
+        /* YOL HARİTASI BAŞLIĞI         */
+        /* ----------------------------- */
+        .roadmap-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #64ff9a;
+            text-shadow: 0 0 3px rgba(0, 198, 255, 0.5);
+            /* Glow azaltıldı */
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
 
+        /* ----------------------------- */
+        /* YOL HARİTASI ADIMLARI        */
+        /* ----------------------------- */
+        .road {
+            position: relative;
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: fadeInStep 1s forwards;
+        }
+
+        .step:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .step:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .step:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        .step:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .step:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        .step:nth-child(6) {
+            animation-delay: 1.8s;
+        }
+
+        .step:nth-child(7) {
+            animation-delay: 2.1s;
+        }
+
+        .step:nth-child(8) {
+            animation-delay: 2.4s;
+        }
+
+        @keyframes fadeInStep {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ----------------------------- */
+        /* ADIM NUMARALARI               */
+        /* ----------------------------- */
+        .step .circle {
+            position: absolute;
+            left: -45px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #64ffbc, #00ffa6);
+            border-radius: 50%;
+            color: #143260;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-family: 'Fira Code', monospace;
+            box-shadow: 0 0 8px rgba(100, 255, 218, 0.5), 0 0 12px rgba(0, 198, 255, 0.4) inset;
+            /* Glow azaltıldı */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .step .circle:hover {
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.6), 0 0 20px rgba(0, 198, 255, 0.5) inset;
+        }
+
+        /* ----------------------------- */
+        /* ADIM BAŞLIĞI VE AÇIKLAMASI    */
+        /* ----------------------------- */
+        .step h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #64ffda;
+            text-shadow: 0 0 2px rgba(0, 198, 255, 0.4);
+            /* Glow minimum, okunabilir */
+        }
+
+        .step p {
+            font-size: 1.1rem;
+            color: #64ffda;
+            /* Daha kontrastlı ve okunabilir */
+            line-height: 1.7;
+            margin-left: 12px;
+        }
+
+        /* ----------------------------- */
+        /* YOL ÇİZGİSİ                   */
+        /* ----------------------------- */
+        .road::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -42px;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, #64ffda, #00c6ff);
+            border-radius: 4px;
+            box-shadow: 0 0 6px rgba(100, 255, 218, 0.5), 0 0 10px rgba(0, 198, 255, 0.4);
+            /* Glow azaltıldı */
+        }
+
+        /* ----------------------------- */
+        /* RESPONSIVE                     */
+        /* ----------------------------- */
+        @media(max-width:768px) {
+            .roadmap-container {
+                padding-left: 30px;
+            }
+
+            .step .circle {
+                left: -35px;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+
+        .aa-blog {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            background-color: #000000;
+            border-radius: 10px;
+            padding-left: 10px;
+            text-align: center;
+            border: 1px solid #000000;
+
+        }
+
+        .aa-blog button {
+            display: block;
+            padding: 7px;
+            border-radius: 10px;
+            background-color: var(--primary-color);
+            cursor: pointer;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
