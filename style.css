@@ -1081,7 +1081,8 @@
         .site-body h6,
         .site-body p,
         .site-body button,
-        .site-body ul, li  {
+        .site-body ul,
+        li {
             color: #3add5b;
             /* Neon mavi */
             text-shadow: 0 0 2px rgba(100, 255, 141, 0.653);
