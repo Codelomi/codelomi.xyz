@@ -42,6 +42,42 @@
             color: white;
         }
 
+        /* Light Mode */
+        body .kutuphane {
+            background-color: rgba(78, 66, 66, 0.696);
+            /* Açık arka plan */
+            border: 10px double black;
+            /* Çerçeve aynı kalsın */
+            border-radius: 10px;
+            color: black;
+            /* Yazı rengi siyah */
+            padding-left: 15px;
+            width: 30%;
+            height: auto;
+            padding: 5px;
+            
+        }
+
+        /* Dark Mode */
+        body.dark .kutuphane {
+            background-color: rgb(39, 42, 39);
+            /* Koyu arka plan */
+            border: 10px double black;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            /* Açık yazı rengi */
+            padding-left: 15px;
+            width: 30%;
+            height: auto;
+            padding: 5px;
+        }
+
+        /* Paragraflar */
+        .kutuphane p {
+            display: block;
+        }
+
+
         /* HEADER STİLLERİ */
         .site-header {
             text-align: center;
@@ -1292,13 +1328,10 @@
             padding-left: 15px;
             width: 30%;
             height: auto;
-            padding: 5px;        
+            padding: 5px;
         }
 
         .kutuphane p {
             display: block;
 
         }
-
-
-        
