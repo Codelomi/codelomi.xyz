@@ -1021,7 +1021,15 @@
 
 
         mark {
-            background-color: rgb(84, 150, 220);
+            background: linear-gradient(to right, var(--dark-color), #4a6491);
+            border-radius: 10px;
+            padding: 3px;
+            border: 1px solid whitesmoke;
+        }
+
+        mark:hover {
+            border: 4px double whitesmoke;
+            transition: all 0.3s ease-out;
         }
 
 
@@ -1275,3 +1283,22 @@
             text-align: center;
 
         }
+
+        .kutuphane {
+            background-color: rgb(39, 42, 39);
+            border: 10px double black;
+            border-radius: 10px;
+            color: wheat;
+            padding-left: 15px;
+            width: 30%;
+            height: auto;
+            padding: 5px;        
+        }
+
+        .kutuphane p {
+            display: block;
+
+        }
+
+
+        

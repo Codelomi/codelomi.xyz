@@ -107,103 +107,56 @@
         <br><br>
 
         <h3>Detaylı Teknik Açıklama</h3>
-        <h4>1. Kütüphaneler ve Bağımlılıklar</h4>
-        <div class="card">
-            <div class="header">
-                <div class="top">
-                    <div class="circle">
-                        <span class="red circle2"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="yellow circle2"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="green circle2"></span>
-                    </div>
-                    <div class="title">
-                        <p id="title2">Gerekli Kütüphaneler</p>
-                    </div>
-                </div>
-            </div>
-            <div class="copy-button-container">
-                <button class="copy-button" onclick="copyCode(this)">
-                    <i class="fas fa-copy"></i> Kopyala
-                </button>
-            </div>
-            <div class="code-container">
-                <textarea class="area" id="code" name="code" readonly="">
-import cv2                     
-import mediapipe as mp         
-from collections import deque   
-import time         
-import os           
-import math          
-    </textarea>
-            </div>
+        <h4>1. Kütüphaneler ve Bağımlılıklar</h4><br><br>
+
+        <div class="kutuphane">
+            <p style="color: wheat;">
+                1- <b>import cv2 <br>
+                    2- import mediapipe as mp <br>
+                    3- from collections import deque <br>
+                    4- import time <br>
+                    5- import os <br>
+                    6- import math <br></b>
+            </p>
         </div>
 
         <br><br>
 
         <h4>2. Yapılandırma Parametreleri</h4>
 
+        <br>
 
+        <div class="kutuphane">
+            <p style="color: wheat;">1- <b>MAX_PATH_LEN = 64 # El izi için maksimum nokta sayısı <br><br>
 
-        <div class="card1">
-            <div class="header">
-                <div class="top">
-                    <div class="circle">
-                        <span class="red circle2"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="yellow circle2"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="green circle2"></span>
-                    </div>
-                    <div class="title">
-                        <p id="title2">Yapılandırma Parametreleri</p>
-                    </div>
-                </div>
-            </div>
-            <div class="copy-button-container">
-                <button class="copy-button" onclick="copyCode(this)">
-                    <i class="fas fa-copy"></i> Kopyala
-                </button>
-            </div>
-            <div class="code-container">
-                <textarea class="area" id="code1" name="code" readonly="">
-MAX_PATH_LEN = 64    # El izi için maksimum nokta sayısı
+                    2- SMOOTHING = 0.7 # Hareket yumuşatma katsayısı (0-1 arası) <br><br>
 
-SMOOTHING = 0.7      # Hareket yumuşatma katsayısı (0-1 arası)
+                    3- CAM_IDX = 0 # Kullanılacak kamera indeksi (0 varsayılan kamera) <br><br>
 
-CAM_IDX = 0          # Kullanılacak kamera indeksi (0 varsayılan kamera)
+                    4- DRAW_LANDMARKS = True # El işaret noktalarının çizilip çizilmeyeceği <br><br>
 
-DRAW_LANDMARKS = True # El işaret noktalarının çizilip çizilmeyeceği
+                    5- DRAW_TRAIL = False # El izinin çizilip çizilmeyeceği <br><br>
 
-DRAW_TRAIL = False   # El izinin çizilip çizilmeyeceği
+                    6- FILE_TO_OPEN = r"C:\Users\PC\Desktop\ornek.jpg" # Tetiklendiğinde açılacak dosya <br><br>
 
-FILE_TO_OPEN = r"C:\Users\PC\Desktop\ornek.jpg"  # Tetiklendiğinde açılacak dosya
-
-TRIGGER_REGION = (500, 150, 600, 300)  # Dosya açma tetikleyici bölgesi (x1, y1, x2, y2)         
-    </textarea>
-            </div>
+                    7- TRIGGER_REGION = (500, 150, 600, 300) # Dosya açma tetikleyici bölgesi (x1, y1, x2, y2)</b> </p>
         </div>
 
 
         <br><br>
 
         <h4>3. Ana Fonksiyonların Detaylı Açıklaması</h4>
-        <p><mark>fingers_up() Fonksiyonu </mark><br>
+        <p><mark>fingers_up()</mark> Fonksiyonu <br>
             Bu fonksiyon, elin hangi parmaklarının açık olduğunu tespit eder:</p><br>
         <ul>
             <li>Başparmak: Elin sağ veya sol olmasına göre farklı logic kullanır</li>
             <li>Diğer parmaklar: Parmak ucu ve bir alt eklemin konumlarını karşılaştırır</li>
         </ul>
         <br><br>
-        <p><mark>distance() Fonksiyonu</mark><br>
+        <p><mark>distance()</mark> Fonksiyonu<br>
             İki nokta arasındaki Öklid mesafesini hesaplar (Pythagorean theorem)</p>
         <br>
-        <p><mark>main() Fonksiyonu</mark></p>
+        <p><mark>main()</mark> Fonksiyonu</p>
         <p>Ana program akışını yönetir :</p>
         <ul>
             <li>Kamera bağlantısını açar</li>
