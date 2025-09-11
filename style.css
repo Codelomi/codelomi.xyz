@@ -55,7 +55,7 @@
             width: 30%;
             height: auto;
             padding: 5px;
-            
+
         }
 
         /* Dark Mode */
@@ -72,9 +72,10 @@
             padding: 5px;
         }
 
-        /* Paragraflar */
-        .kutuphane p {
-            display: block;
+        /* Tüm site için yumuşak geçiş */
+        body,
+        body * {
+            transition: background-color 0.4s ease, color 0.4s ease;
         }
 
 
