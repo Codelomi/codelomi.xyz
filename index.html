@@ -30,7 +30,9 @@
     <!-- Anasayfa Giriş Bloğu -->
     <!-- Anasayfa Giriş Bloğu -->
     <div class="hero">
-      <h1>Hoş geldin! 🚀</h1>
+      <h1 style="margin-bottom: 10px;">Hoş geldin! 🚀</h1>
+      <p style="text-align: center; color: #ffcc00;margin-top: 0;"><small><small><i>Aşşa kaydır lo</i></small></small>
+      </p>
       <div class="hero-text">
         <p>Selam! Burası <strong>codelomi.xyz</strong> kodlama, teknoloji ve mini projelerle dolu, keşfetmeye değer bir
           alan. Buraya gelmiş olman harika, çünkü burası sadece not defteri değil, aynı zamanda ufak bir öğrenme
@@ -99,21 +101,25 @@
     </style>
 
     <script>
-      // Scroll animasyonu için JS
       const paragraphs = document.querySelectorAll('.hero-text p');
 
-      function revealOnScroll() {
-        const windowHeight = window.innerHeight;
-        paragraphs.forEach(p => {
-          const elementTop = p.getBoundingClientRect().top;
-          if (elementTop < windowHeight - 100) {
-            p.classList.add('visible');
-          }
-        });
-      }
+function showOneAtATime() {
+  const windowHeight = window.innerHeight;
 
-      window.addEventListener('scroll', revealOnScroll);
-      window.addEventListener('load', revealOnScroll);
+  paragraphs.forEach((p, index) => {
+    const rect = p.getBoundingClientRect();
+    // Paragrafın üstü viewport ortasına yaklaştı mı?
+    if (rect.top < windowHeight / 2 && rect.bottom > windowHeight / 2) {
+      // Bu paragraf öne çıksın
+      paragraphs.forEach(other => other.classList.remove('visible')); // diğerlerini gizle
+      p.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOneAtATime);
+window.addEventListener('load', showOneAtATime);
+
     </script>
 
 
