@@ -16,6 +16,7 @@
             --transition: all 0.3s ease;
         }
 
+
         body {
             margin: auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -81,14 +82,18 @@
 
         /* HEADER STİLLERİ */
         .site-header {
+            position: fixed;
+            z-index: 99999;
+            width: 76.2%;
+            top: 4px;
             text-align: center;
-            padding: 25px 0;
+            padding: 15px 1px;
             background: linear-gradient(to right, var(--dark-color), #4a6491);
             border-radius: 10px;
             box-shadow: var(--shadow);
             margin-bottom: 20px;
             color: white;
-            position: relative;
+            
         }
 
         .site-title i {
@@ -124,6 +129,7 @@
 
         .nav-link {
             text-decoration: none;
+            color: #00ffa6;
         }
 
         .nav-button {
