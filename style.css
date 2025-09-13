@@ -83,18 +83,24 @@
         /* HEADER STİLLERİ */
         .site-header {
             position: fixed;
-            z-index: 99999;
-            width: 60.8%;
             top: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99999;
+            width: 90%;
+            /* genişliği küçülttüm */
+            max-width: 1160px;
+            /* masaüstünde sınır */
+            margin: 0 auto;
             text-align: center;
             padding: 15px 1px;
             background: linear-gradient(to right, var(--dark-color), #4a6491);
             border-radius: 10px;
             box-shadow: var(--shadow);
-            margin-bottom: 20px;
             color: white;
-            
         }
+
+
 
         .site-title i {
             font-size: 2.8rem;
