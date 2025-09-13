@@ -103,22 +103,23 @@
     <script>
       const paragraphs = document.querySelectorAll('.hero-text p');
 
-function showOneAtATime() {
-  const windowHeight = window.innerHeight;
+      function toggleOnScroll() {
+        const windowHeight = window.innerHeight;
 
-  paragraphs.forEach((p, index) => {
-    const rect = p.getBoundingClientRect();
-    // Paragrafın üstü viewport ortasına yaklaştı mı?
-    if (rect.top < windowHeight / 2 && rect.bottom > windowHeight / 2) {
-      // Bu paragraf öne çıksın
-      paragraphs.forEach(other => other.classList.remove('visible')); // diğerlerini gizle
-      p.classList.add('visible');
-    }
-  });
-}
+        paragraphs.forEach(p => {
+          const rect = p.getBoundingClientRect();
 
-window.addEventListener('scroll', showOneAtATime);
-window.addEventListener('load', showOneAtATime);
+          // Paragraf viewport içinde mi?
+          if (rect.top < windowHeight && rect.bottom > 0) {
+            p.classList.add('visible'); // görünür yap
+          } else {
+            p.classList.remove('visible'); // kaybolsun
+          }
+        });
+      }
+
+      window.addEventListener('scroll', toggleOnScroll);
+      window.addEventListener('load', toggleOnScroll);
 
     </script>
 
