@@ -73,6 +73,21 @@
             padding: 5px;
         }
 
+        body.dark .form-input {
+            background-color: #151f26;
+            color: #3d934c;
+            opacity: 0.5px;
+        }
+
+        body.dark .form-textarea {
+            background-color: #151f26;
+            color: #3d934c;
+        }
+
+        body.dark .form-label {
+            color: #1f4681;
+        }
+
         /* Tüm site için yumuşak geçiş */
         body,
         body * {
