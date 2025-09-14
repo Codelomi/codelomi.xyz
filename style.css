@@ -1138,11 +1138,13 @@
             border-radius: 10px;
             padding: 3px;
             border: 1px solid whitesmoke;
+            transition: all 0.3s ease;
         }
 
         mark:hover {
             border: 4px double whitesmoke;
             transition: all 0.3s ease-out;
+            font-size: 30px;
         }
 
 
