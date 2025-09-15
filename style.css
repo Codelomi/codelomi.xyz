@@ -123,6 +123,7 @@
             padding-left: 15px;
             flex: 1;
             /* Başlık alanının esnek olmasını sağla */
+            transition: all 0.3s ease-in-out;
         }
 
         .site-title i {
@@ -162,6 +163,13 @@
             color: #00ffa6;
         }
 
+        button {
+            background: transparent;
+            border: 1px #455D85;
+            padding: 5px;
+            cursor: pointer;
+        }
+
 
 
         .divider {
@@ -171,49 +179,59 @@
             margin: 25px 0;
         }
 
-        /* Responsive tasarım için media query'ler */
+        /* Butonlar her zaman yatayda yan yana kalsın */
+        .main-navigation {
+            display: flex;
+            flex-direction: row;
+            /* Yatay hizala */
+            flex-wrap: nowrap;
+            /* Alt satıra geçmesini engelle */
+            gap: 5px;
+            /* Butonlar arası boşluk */
+            justify-content: flex-end;
+            /* Sağ tarafa yasla */
+        }
+
+        /* Responsive: ekran küçüldükçe header ve buton küçülsün ama yatay kalsın */
         @media (max-width: 768px) {
             .site-header {
-                flex-direction: column;
-                gap: 10px;
-                padding: 8px 10px;
+                padding: 1px 3px;
+                gap: 3px;
             }
 
-            .site-title {
-                text-align: center;
-                padding-left: 0;
-                margin-bottom: 5px;
+            .main-navigation button {
+                padding: 1px 4px;
+                font-size: 0.70rem;
+                min-height: 10px;
             }
-
-            .site-title i {
-                font-size: 1.8rem;
-            }
-
-            .main-navigation {
-                justify-content: center;
-                width: 100%;
-                gap: 8px;
-            }
-
-
         }
 
         @media (max-width: 480px) {
             .site-header {
-                padding: 6px 8px;
+                padding: 2px 3px;
+                gap: 3px;
             }
 
-            .site-title i {
-                font-size: 1.6rem;
-            }
-
-
-
-            .main-navigation {
-                gap: 5px;
-                flex-wrap: wrap;
+            .main-navigation button {
+                padding: 1px 4px;
+                font-size: 0.7rem;
+                min-height: 5px;
             }
         }
+
+        @media (max-width: 360px) {
+            .site-header {
+                padding: 1px 3px;
+                gap: 2px;
+            }
+
+            .main-navigation button {
+                padding: 1px 3px;
+                font-size: 0.65rem;
+                min-height: 10px;
+            }
+        }
+
 
         /* ANA İÇERİK STİLLERİ */
         .main-content {
