@@ -106,7 +106,8 @@
             max-width: 1160px;
             margin: 0 auto;
             padding: 10px 15px;
-            background: linear-gradient(to right, var(--dark-color), #4a6491);
+            background-image: url(blue-metal-technology-horizontal-background-260nw-659004199.webp);
+            background-size: cover;
             border-radius: 10px;
             box-shadow: var(--shadow);
             color: white;
@@ -114,6 +115,7 @@
             justify-content: space-between;
             align-items: center;
             transition: var(--transition);
+            opacity: 0.5spx;
         }
 
         .site-title {
@@ -164,11 +166,17 @@
         }
 
         button {
+            display: flex;
+            gap: 7px;
             background: transparent;
-            
-            padding: 5px;
+            padding: 7px;
             cursor: pointer;
             font-size: 15px;
+            transition: all 0.3s ease-out;
+        }
+
+        button:hover {
+            font-size: 20px;
         }
 
 
@@ -225,7 +233,7 @@
                 padding: 1px 4px;
                 gap: 1px;
             }
-            
+
             .main-navigation button {
                 padding: 1px 3px;
                 font-size: 0.60rem;
@@ -558,7 +566,8 @@
         .site-footer {
             text-align: center;
             padding: 25px;
-            background: var(--dark-color);
+            background-image: url(blue-metal-technology-horizontal-background-260nw-659004199.webp);
+            background-size: cover;
             color: white;
             border-radius: 8px;
             box-shadow: var(--shadow);
@@ -1407,7 +1416,7 @@
             width: 50%;
             margin: auto;
             padding: 3px;
-            border: 3px solid greenyellow ;
+            border: 3px solid greenyellow;
             border-radius: 20px;
         }
 
