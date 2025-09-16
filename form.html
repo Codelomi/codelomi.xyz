@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeLomi | İletişim Formu</title>
+    <title>CodeLomi | Ana Sayfa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Foto/1codelomi.png">
+    <meta name="description" content="CodeLomi Ana Sayfa">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body class="site-body">
@@ -17,8 +20,16 @@
             <a class="nav-link" href="blog.html"><button class="nav-button">Blog</button></a>
             <a class="nav-link" href="hakimizda.html"><button class="nav-button">Hakkımızda</button></a>
             <a class="nav-link" href="form.html"><button class="nav-button">Bize Ulaşın</button></a>
-            <button class="nav-button" id="theme-toggle">🌙 Dark Mode</button>
-            <script src="theme.js"></script>
+            <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+                <script src="theme.js"></script>
+            </div>
+
         </nav>
     </header><br><br>
 

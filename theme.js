@@ -1,36 +1,18 @@
-const button = document.getElementById("theme-toggle");
-const body = document.body;
+const checkbox = document.getElementById("checkbox");
 
-button.addEventListener("click", () => {
-  // Önce simgeyi kaydırıp dönme efekti eklemek için
-  button.style.transition = "transform 0.5s ease, opacity 0.5s ease";
-  button.style.opacity = "0";
-  button.style.transform = "rotate(180deg)";
-
-  setTimeout(() => {
-    // Tema değişikliği
-    body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
-      button.textContent = "☀️";
-      localStorage.setItem("theme", "dark");
-    } else {
-      button.textContent = "🌙";
-      localStorage.setItem("theme", "light");
-    }
-
-    // Yeni simgeyi görünür yapmak için
-    button.style.opacity = "1";
-    button.style.transform = "rotate(360deg)";
-
-    // Bitim sonrası dönüşü sıfırla
-    setTimeout(() => {
-      button.style.transform = "rotate(0deg)";
-    }, 500);
-  }, 250);
-});
-
-// Sayfa açıldığında eski tercihi yükle
+// Sayfa açıldığında daha önce seçilmiş tema varsa uygula
 if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
-  button.textContent = "☀️";
+  document.body.classList.add("dark");
+  checkbox.checked = true;
 }
+
+// Toggle olunca tema değiştir
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+});
