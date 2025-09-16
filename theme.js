@@ -4,10 +4,10 @@ const body = document.body;
 button.addEventListener("click", () => {
   body.classList.toggle("dark");
   if (body.classList.contains("dark")) {
-    button.textContent = "☀️ Light Mode";
+    button.textContent = "☀️";
     localStorage.setItem("theme", "dark");
   } else {
-    button.textContent = "🌙 Dark Mode";
+    button.textContent = "🌙";
     localStorage.setItem("theme", "light");
   }
 });
@@ -15,5 +15,5 @@ button.addEventListener("click", () => {
 // Sayfa açıldığında eski tercihi yükle
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
-  button.textContent = "☀️ Light Mode";
+  button.textContent = "☀️";
 }
