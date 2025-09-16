@@ -983,7 +983,7 @@
         .bmw {
             border: 1px solid white;
             border-radius: 15px;
-            padding: 5px 5px;
+            padding: 2px 3px;
             margin: 0;
             position: absolute;
             /* Konumlandırma */
@@ -996,7 +996,7 @@
         }
 
         .bmw:hover {
-            padding: 12px;
+            padding: 2px;
         }
 
         .next {
