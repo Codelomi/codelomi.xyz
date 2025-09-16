@@ -106,7 +106,7 @@
             max-width: 1160px;
             margin: 0 auto;
             padding: 10px 15px;
-            background-image: url(blue-metal-technology-horizontal-background-260nw-659004199.webp);
+            background-image: url(Foto/blue-metal-technology-horizontal-background-260nw-659004199.webp);
             background-size: cover;
             border-radius: 10px;
             box-shadow: var(--shadow);
@@ -486,6 +486,7 @@
                 pop-in .35s ease-out both,
                 sweep .9s cubic-bezier(.2, .7, .2, 1) .15s forwards,
                 underline .6s ease .9s forwards;
+            border-radius: 10px;
         }
 
         /* Alt çizgi */
@@ -566,7 +567,7 @@
         .site-footer {
             text-align: center;
             padding: 25px;
-            background-image: url(blue-metal-technology-horizontal-background-260nw-659004199.webp);
+            background-image: url(Foto/blue-metal-technology-horizontal-background-260nw-659004199.webp);
             background-size: cover;
             color: white;
             border-radius: 8px;
