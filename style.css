@@ -1,7 +1,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
 
-         /* CSS Dosyanın EN ÜSTÜNE yaz */
+        /* CSS Dosyanın EN ÜSTÜNE yaz */
         @font-face {
             font-family: 'Paragraf';
             /* Kendine burada bir isim ver */
@@ -27,8 +27,8 @@
             font-display: swap;
             /* Yazı tipi yüklenene kadar metni gizlemez, swap yaparsın */
         }
-        
-        
+
+
         /* GENEL STİLLER */
         * {
             margin: 0;
@@ -48,7 +48,7 @@
         }
 
 
-    
+
 
         body {
             margin: auto;
@@ -1506,14 +1506,6 @@
             transform: translateX(24px);
         }
 
-
-
-
-
-
-
-
-
         /*  Support me if you like it */
         .support {
             position: absolute;
@@ -1532,3 +1524,4 @@
         .support a:hover {
             transform: scale(1.1);
         }
+
