@@ -180,12 +180,6 @@
             animation: gradientFlow 3s linear infinite;
         }
 
-        .site-title i:hover {
-            background: linear-gradient(90deg, #2be277, #4169e1);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 10s ease;
-        }
 
         @keyframes gradientFlow {
             0% {
