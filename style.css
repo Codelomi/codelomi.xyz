@@ -51,6 +51,8 @@
 
 
         body {
+            position: sticky;
+            top: 0%;
             margin: auto;
             font-family: 'Paragraf', sans-serif;
             font-weight: normal;
@@ -1528,4 +1530,46 @@
 
         .support a:hover {
             transform: scale(1.1);
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 15px;
+
+        }
+
+        ::-webkit-scrollbar-track {
+            background: hsl(120 50% 50% / 1);
+            background: url(Foto/blue-metal-technology-horizontal-background-260nw-659004199.webp);
+            background-size: 10000px;
+        }
+
+
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            transition: all 0.5s ease;
+            background: linear-gradient(90deg, #402be2, #41e179, #402be2);
+
+            animation: gradientFlow 3s linear infinite;
+        }
+
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+
+        ::-webkit-scrollbar-thumb:hover {
+            border: 2x solid red;
+            border-radius: 10px;
+            transition: all 0.6s ease;
+            filter: blur(0.8px);
+            opacity: 0.5px;
         }
