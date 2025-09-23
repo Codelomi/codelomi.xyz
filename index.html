@@ -14,7 +14,7 @@
     .hero {
       max-width: 900px;
       margin: 50px auto;
-      padding: 50px 40px;
+      padding: 30px 30px;
       background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
       color: #f0f0f0;
       border-radius: 15px;
@@ -25,14 +25,14 @@
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-bottom: 30px;
       color: #ffcc00;
       text-align: center;
     }
 
     .hero-text p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 2;
       opacity: 0;
       transform: translateY(40px) scale(0.95);
@@ -48,7 +48,42 @@
     .hero strong {
       color: #00d8ff;
     }
-    
+
+    #gununSozu {
+      background: url(Foto/blue-metal-technology-horizontal-background-260nw-659004199.webp);
+      background-size: cover;
+      border-radius: 10px;
+      padding: 50px;
+      color: #3add5b !important;
+      text-shadow: 0 0 2px rgba(100, 255, 141, 0.653) !important;
+      font-family: 'Fira Code', monospace !important;
+      font-size: 30px !important;
+      text-align: center !important;
+      transition: all 0.3s ease-in-out !important;
+    }
+
+    .yeni-yazilar {
+      background-color: #191941;
+      text-align: center;
+      border: 4px dotted gray;
+      border-radius: 150px;
+      padding: 2px;
+      margin-right: 200px;
+      margin-left: 200px;
+    }
+
+    .buttoni {
+      display: inline-block;
+      background-color: #0b5663;
+      text-align: center;
+      border-radius: 100px;
+      transition: all 0.3s ease-in;
+    }
+
+    .buttoni:hover {
+      background-color: #1893a9;
+      transition: all 0.3s ease-out;
+    }
   </style>
 
 </head>
@@ -111,7 +146,18 @@
       </div>
     </div>
 
-    
+    <div class="gunun-sozu" id="gununSozu">
+      <p id="gununSozu"
+        style="font-size: 24px; text-align: center; color: #3add5b; text-shadow: 0 0 2px rgba(100, 255, 141, 0.653); font-family: 'Fira Code', monospace; transition: all 0.3s ease-in-out;">
+        Söz yükleniyor...</p>
+    </div>
+    <br><br>
+    <div class="yeni-yazilar">
+      <p>Duyduk duymadık demeyin <a class="nav-link" href="https://instagram.com/codelomi.xyz">AntiVirüs</a> Yeni Blog yazısı Çıkardııı <br>↓<br>
+        <span><a href="dbot.html" class="nav-link"><button class="buttoni" style="margin: auto;">Yeni Yazıyı Görmek İçin
+              Tıkla</button></a></span>
+      </p>
+    </div>
 
     <script>
       const paragraphs = document.querySelectorAll('.hero-text p');
@@ -135,7 +181,34 @@
       window.addEventListener('load', toggleOnScroll);
 
     </script>
+    <script>
+      const sozler = [
+        '"Kod yazmak sihirbazlıktır - imkansızı mümkün kılarsın"',
+        '"Debug yapmak: Sonsuz sabır testidir"',
+        '"Her bug bir öğrenme fırsatıdır"',
+        '"Clean code, temiz düşüncenin yansımasıdır"',
+        '"Yazılım geliştirme bir sanattır"',
+        '"Konsolda "Hello World" yazdıran ilk andaki heyecan hiç bitmez"',
+        '"Stack Overflow olmasaydı, hepimiz kaybolurduk"',
+        '"Git commit: Bugün de bir şeyler başardım"',
+        '"Yazılımcının kahvesi, kodun yakıtıdır"',
+        '"404: Motivation not found - ama yine de devam ediyoruz"',
+        '"Kodun çalıştığı an: Dünyanın en güzel hissi"',
+        '"Yazılımda en iyi çözüm, en basit olandır"',
+        '"Her proje bir maceradır"',
+        '"Kod yazarken zamanın nasıl geçtiğini anlamazsın"',
+        '"Yazılımcı olmak, sürekli öğrenmek demektir"',
+        '"Teknoloji değişir, algoritmalar kalır"',
+        '"Kodunuz sizin imzanızdır"',
+        '"Bugünün kodu, yarının temelidir"',
+        '"Yazılım dünyayı değiştirir"',
+        '"Kod yazmak, puzzle çözmek gibidir"'
+      ];
 
+      const sozElementi = document.getElementById("gununSozu");
+      const rastgeleIndex = Math.floor(Math.random() * sozler.length);
+      sozElementi.textContent = sozler[rastgeleIndex];
+    </script>
 
   </main>
 
