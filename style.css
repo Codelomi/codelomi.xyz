@@ -3,30 +3,19 @@
         /* CSS Dosyanın EN ÜSTÜNE yaz */
         @font-face {
             font-family: 'Paragraf';
-            /* Kendine burada bir isim ver */
             src: url('Fonts/Paragraf.ttf') format('truetype');
-            /* Dosya yolunu doğru ver */
             font-weight: normal;
-            /* Bu dosya normal kalınlıkta ise */
             font-style: normal;
-            /* Bu dosya normal stilde (italik değil) ise */
             font-display: swap;
-            /* Yazı tipi yüklenene kadar metni gizlemez, swap yaparsın */
         }
 
         @font-face {
             font-family: 'Site_Titlle';
-            /* Kendine burada bir isim ver */
             src: url('Fonts/Site-Title.ttf') format('truetype');
-            /* Dosya yolunu doğru ver */
             font-weight: 600;
-            /* Bu dosya normal kalınlıkta ise */
             font-style: normal;
-            /* Bu dosya normal stilde (italik değil) ise */
             font-display: swap;
-            /* Yazı tipi yüklenene kadar metni gizlemez, swap yaparsın */
         }
-
 
         /* GENEL STİLLER */
         * {
@@ -46,9 +35,6 @@
             --transition: all 0.3s ease;
         }
 
-
-
-
         body {
             position: sticky;
             top: 0%;
@@ -64,9 +50,8 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            cursor: url("cursor.cur"), auto;
-        }
 
+        }
 
         /* Karanlık tema */
         body.dark {
@@ -82,27 +67,21 @@
         /* Light Mode */
         body .kutuphane {
             background-color: rgba(78, 66, 66, 0.696);
-            /* Açık arka plan */
             border: 10px double black;
-            /* Çerçeve aynı kalsın */
             border-radius: 10px;
             color: black;
-            /* Yazı rengi siyah */
             padding-left: 15px;
             width: 30%;
             height: auto;
             padding: 5px;
-
         }
 
         /* Dark Mode */
         body.dark .kutuphane {
             background-color: rgb(39, 42, 39);
-            /* Koyu arka plan */
             border: 10px double black;
             border-radius: 10px;
             color: rgb(0, 0, 0);
-            /* Açık yazı rengi */
             padding-left: 15px;
             width: 30%;
             height: auto;
@@ -124,14 +103,11 @@
             color: #1f4681;
         }
 
-
-
         /* Tüm site için yumuşak geçiş */
         body,
         body * {
             transition: background-color 0.3s ease, color 0.4s ease;
         }
-
 
         /* HEADER STİLLERİ */
         .site-header {
@@ -160,11 +136,9 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: 600;
             margin-bottom: 0;
-            /* Margin'i sıfırla */
             text-align: left;
             padding-left: 15px;
             flex: 1;
-            /* Başlık alanının esnek olmasını sağla */
             transition: all 10s ease;
         }
 
@@ -182,7 +156,6 @@
             animation: gradientFlow 3s linear infinite;
         }
 
-
         @keyframes gradientFlow {
             0% {
                 background-position: 0% center;
@@ -196,9 +169,7 @@
         .main-navigation {
             display: flex;
             justify-content: flex-end;
-            /* Butonları sağa hizala */
             gap: 12px;
-            /* Butonlar arası boşluğu azalt */
             align-items: center;
             margin-top: 0;
             flex-wrap: wrap;
@@ -224,8 +195,6 @@
             font-size: 17px;
         }
 
-
-
         .divider {
             border: 0;
             height: 1px;
@@ -237,13 +206,9 @@
         .main-navigation {
             display: flex;
             flex-direction: row;
-            /* Yatay hizala */
             flex-wrap: nowrap;
-            /* Alt satıra geçmesini engelle */
             gap: 5px;
-            /* Butonlar arası boşluk */
             justify-content: flex-end;
-            /* Sağ tarafa yasla */
         }
 
         /* Responsive: ekran küçüldükçe header ve buton küçülsün ama yatay kalsın */
@@ -273,7 +238,7 @@
             }
         }
 
-        @media (max-width:375) {
+        @media (max-width:375px) {
             .site-header {
                 padding: 1px 4px;
                 gap: 1px;
@@ -299,7 +264,6 @@
                 min-height: 5px;
             }
         }
-
 
         /* ANA İÇERİK STİLLERİ */
         .main-content {
@@ -858,9 +822,6 @@
             text-shadow: none;
         }
 
-
-
-
         /* From Uiverse.io by 3bdel3ziz-T */
         .container {
             --transition: 350ms;
@@ -1031,13 +992,9 @@
             padding: 2px 3px;
             margin: 0;
             position: absolute;
-            /* Konumlandırma */
             bottom: -15px;
-            /* Aşağıya taşır */
             right: 20px;
-            /* Sağdan hizala */
             background: #488aec;
-            /* Butonun rengi */
         }
 
         .bmw:hover {
@@ -1050,6 +1007,7 @@
             color: white;
         }
 
+        /* DÜZELTME: .card1 ve .card çakışmasını önlemek için */
         .card1 {
             width: 240px;
             height: 390px;
@@ -1066,7 +1024,7 @@
             box-shadow: 0px 10px 10px black;
         }
 
-        .card {
+        .code-card {
             width: 200px;
             height: 260px;
             margin: 0 auto;
@@ -1077,7 +1035,7 @@
             transition: 0.5s;
         }
 
-        .card:hover {
+        .code-card:hover {
             transform: translateY(-7px);
             box-shadow: 0px 10px 10px black;
         }
@@ -1166,19 +1124,15 @@
             padding-left: 10px;
         }
 
-
         li {
             margin-left: 35px;
         }
-
 
         .video-container {
             position: relative;
             width: 600px;
             margin: 0 auto;
-            /* Ortalamak için */
             padding-bottom: 40.0%;
-            /* ?:?  oranı */
             height: 315px;
             display: block;
             margin-left: auto;
@@ -1195,8 +1149,6 @@
             height: 100%;
         }
 
-
-
         .p {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1.2rem;
@@ -1205,8 +1157,6 @@
             margin-bottom: 1.5rem;
         }
 
-
-
         .yol {
             display: block;
             margin-left: auto;
@@ -1214,8 +1164,6 @@
             max-width: 100%;
             height: auto;
         }
-
-
 
         /* ----------------------------- */
         /* GENEL YAZI VE TEMEL AYARLAR  */
@@ -1229,12 +1177,9 @@
         .site-body p,
         .site-body button,
         .site-body ul,
-        .site-body div
-        li {
+        .site-body div li {
             color: #3add5b;
-            /* Neon mavi */
             text-shadow: 0 0 2px rgba(100, 255, 141, 0.653);
-            /* Hafif glow, okunabilirlik arttı */
             font-family: 'Fira Code', monospace;
             transition: all 0.3s ease-in-out;
         }
@@ -1258,7 +1203,6 @@
             margin-bottom: 60px;
             color: #64ff9a;
             text-shadow: 0 0 3px rgba(0, 198, 255, 0.5);
-            /* Glow azaltıldı */
             letter-spacing: 1px;
             font-weight: 700;
         }
@@ -1339,7 +1283,6 @@
             font-weight: bold;
             font-family: 'Fira Code', monospace;
             box-shadow: 0 0 8px rgba(100, 255, 218, 0.5), 0 0 12px rgba(0, 198, 255, 0.4) inset;
-            /* Glow azaltıldı */
             transition: all 0.3s ease-in-out;
         }
 
@@ -1356,13 +1299,11 @@
             margin-bottom: 12px;
             color: #64ffda;
             text-shadow: 0 0 2px rgba(0, 198, 255, 0.4);
-            /* Glow minimum, okunabilir */
         }
 
         .step p {
             font-size: 1.1rem;
             color: #64ffda;
-            /* Daha kontrastlı ve okunabilir */
             line-height: 1.7;
             margin-left: 12px;
         }
@@ -1380,7 +1321,6 @@
             background: linear-gradient(to bottom, #64ffda, #00c6ff);
             border-radius: 4px;
             box-shadow: 0 0 6px rgba(100, 255, 218, 0.5), 0 0 10px rgba(0, 198, 255, 0.4);
-            /* Glow azaltıldı */
         }
 
         /* ----------------------------- */
@@ -1408,7 +1348,6 @@
             padding-left: 10px;
             text-align: center;
             border: 1px solid #000000;
-
         }
 
         .aa-blog button {
@@ -1421,7 +1360,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-
         }
 
         .kutuphane {
@@ -1437,9 +1375,7 @@
 
         .kutuphane p {
             display: block;
-
         }
-
 
         img {
             display: block;
@@ -1452,7 +1388,6 @@
             border-radius: 20px;
         }
 
-
         button {
             background: transparent;
             border: 1px #455D85;
@@ -1460,17 +1395,10 @@
             cursor: pointer;
         }
 
-        @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+        
 
         body.dark {
             background-color: #292c35;
-        }
-
-        /* #9b59b6 */
-
-        body.dark h1,
-        body.dark .support a {
-            color: #fff;
         }
 
         .checkbox {
@@ -1514,7 +1442,6 @@
             transform: translateX(24px);
         }
 
-        /*  Support me if you like it */
         .support {
             position: absolute;
             right: 20px;
@@ -1533,10 +1460,8 @@
             transform: scale(1.1);
         }
 
-
         ::-webkit-scrollbar {
             width: 15px;
-
         }
 
         ::-webkit-scrollbar-track {
@@ -1545,8 +1470,6 @@
             background-size: 10000px;
         }
 
-
-
         ::-webkit-scrollbar-thumb {
             border-radius: 10px;
             transition: all 0.5s ease;
@@ -1554,9 +1477,6 @@
             animation: gradientFlow 3s linear infinite;
             content: "Nassınız efenim";
         }
-
-    
-
 
         @keyframes gradientFlow {
             0% {
@@ -1568,12 +1488,85 @@
             }
         }
 
-
         ::-webkit-scrollbar-thumb:hover {
-            border: 2x solid red;
+            border: 2px solid red;
             border-radius: 10px;
             transition: all 0.6s ease;
             filter: blur(0.8px);
-            opacity: 0.5px;
+            opacity: 0.5;
         }
-        
+
+
+        .yeni-yazilar {
+            display: block;
+            background-color: #194133;
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 20px;
+            padding: 2px;
+            margin-right: 20%;
+            margin-left: 20%;
+        }
+
+
+
+        .girisfoto {
+            display: inline-block;
+            border: none;
+            background-image: url(Foto/coding-background-9izlympnd0ovmpli.jpg);
+            background-size: cover;
+            padding: 5px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 30px;
+            color: aquamarine;
+            width: 100%;
+        }
+
+        .girisfoto p {
+            color: #ff0000;
+            font-size: 20px;
+        }
+
+        .girisfoto svg {
+            color: #00ffee;
+            margin-top: px;
+
+        }
+
+
+        footer img {
+            display: flex;
+            border: none;
+            width: 70px;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            margin-bottom: -30px;
+            margin-top: -15px ;
+        }
+
+        /* Ana Kapsayıcı: İkonları Yan Yana Getirir ve Ortalarda Tutar */
+        .sosyal-ikonlar {
+            /* İkonları yatay sırada dizer */
+            display: flex;
+
+            /* İkonları yatayda (footer içinde) ortalar */
+            justify-content: center;
+
+            /* İkonları dikeyde hizalar (gerekliyse) */
+            align-items: center;
+
+            /* Telif hakkı metniyle arasına boşluk bırakır */
+            margin-top: 10px;
+        }
+
+        /* İkonların Boyutunu ve Aralarındaki Boşluğu Ayarla */
+        .sosyal-ikon {
+            /* İkonların çok büyük olmasını engeller */
+            width: 35px;
+            height: 35px;
+
+            /* İki ikon arasına 15 piksel boşluk ekler */
+            margin: 0 15px;
+        }
