@@ -811,8 +811,8 @@
 
         /* Selection stilleri */
         ::selection {
-            background-color: rgba(236, 93, 93, 0.8);
-            color: #000;
+            background-color: #732c8f;
+            color: white;
             text-shadow: none;
         }
 
