@@ -63,6 +63,7 @@
             background: #1e1e1e;
             color: white;
         }
+        
 
         /* Light Mode */
         body .kutuphane {
@@ -1176,7 +1177,8 @@
         .site-body p,
         .site-body button,
         .site-body ul,
-        .site-body div li {
+        .site-body div li,
+        .site-body small {
             color: #3add5b;
             text-shadow: 0 0 2px rgba(100, 255, 141, 0.653);
             font-family: 'Fira Code', monospace;
@@ -1367,13 +1369,19 @@
             border-radius: 10px;
             color: wheat;
             padding-left: 15px;
-            width: 30%;
             height: auto;
             padding: 5px;
+            transition: all 0.3s ease;
         }
 
         .kutuphane p {
             display: block;
+        }
+
+        .kutuphane:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+            box-shadow: 5px 4px 50px 2px
         }
 
         img {
