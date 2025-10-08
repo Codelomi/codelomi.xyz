@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+"<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -9,6 +9,22 @@
     <link rel="icon" href="Foto/1codelomi.png">
     <meta name="description" content="CodeLomi Sayfa">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .vertical-hr-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: aqua;
+            height: 150px;
+        }
+
+        .vertical-hr {
+            /* dikey çizgi */
+            height: 100%;
+            /* container kadar uzansın */
+        }
+    </style>
 
 </head>
 
@@ -35,57 +51,68 @@
     <hr class="divider"><br>
 
     <main class="main-content">
-        <!-- FORM -->
-        <form class="contact-form" onsubmit="sendEmail(event)">
-            <div class="form-group">
-                <label class="form-label" for="isim">Ad + Github Adınız :</label>
-                <input class="form-input" type="text" name="isim" id="isim" placeholder="İsminizi giriniz" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="soyad">Soyad:</label>
-                <input class="form-input" type="text" name="soyad" id="soyad" placeholder="Soyadınızı giriniz" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="email">E-posta:</label>
-                <input class="form-input" type="email" name="E-posta" id="email" placeholder="example@example.com"
-                    required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="phone">Telefon Numarası:</label>
-                <input class="form-input" type="tel" name="telefon" id="phone" placeholder="05XX XXX XX XX"
-                    pattern="[0-9]{10,11}" required>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="dogum">Doğum Tarihi:</label>
-                <input class="form-input" type="date" name="dogum" id="dogum" max="2020-12-31">
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="mesaj">Mesajınız:</label>
-                <textarea class="form-textarea" name="mesaj" id="mesaj" cols="20" rows="7"
-                    placeholder="Mesajınızı buraya yazınız"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label" for="link">Dosya Link'i :</label>
-                <input class="form-input" type="text" title="Dosya URL'inizi Yapıştırınız"
-                    placeholder="Dosya URL'sini Yapıştırınız">
-                <p style="opacity: 0.6;"><small>Lütfen Göndereceğiniz Dosyayı Her Hangi Bir Dosya Bulut Sistemine
-                        Yükleyip Buraya
-                        Yapıştırınız </small></p>
-            </div>
+        <div class="vertical-hr-container">
+            <span>Email : aetheriusy22@gmail.com <br>
+                Youtube : CodeLomi <br>
+                İnstagram : <a href="https://instagram.com/codelomi.xyz" target="_blank" class="nav-link">CodeLomi.xyz</a> <br>
+                LinkEdln : <a href="https://www.linkedin.com/in/codelomixyz/" target="_blank" class="nav-link">CodeLomi.Dev</a>
+            </span>
+        </div>
 
 
-            <div class="form-actions">
-                <input type="reset" value="Sıfırla" class="form-button reset-button">
-                <input type="submit" value="Gönder" class="form-button submit-button">
-                <a href="anasayfa.html" class="form-button back-button">Ana Sayfaya Dön</a>
-            </div>
-        </form>
+            <!-- FORM -->
+            <form class="contact-form" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label class="form-label" for="isim">Ad or Github Adınız :</label>
+                    <input class="form-input" type="text" name="isim" id="isim" placeholder="İsminizi giriniz" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="soyad">Soyad:</label>
+                    <input class="form-input" type="text" name="soyad" id="soyad" placeholder="Soyadınızı giriniz"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">E-posta:</label>
+                    <input class="form-input" type="email" name="E-posta" id="email" placeholder="example@example.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Telefon Numarası:</label>
+                    <input class="form-input" type="tel" name="telefon" id="phone" placeholder="05XX XXX XX XX"
+                        pattern="[0-9]{10,11}" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="dogum">Doğum Tarihi:</label>
+                    <input class="form-input" type="date" name="dogum" id="dogum" max="2020-12-31">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="mesaj">Mesajınız:</label>
+                    <textarea class="form-textarea" name="mesaj" id="mesaj" cols="20" rows="7"
+                        placeholder="Mesajınızı buraya yazınız"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="link">Dosya Link'i :</label>
+                    <input class="form-input" type="text" title="Dosya URL'inizi Yapıştırınız"
+                        placeholder="Dosya URL'sini Yapıştırınız">
+                    <p style="opacity: 0.6;"><small>Lütfen Göndereceğiniz Dosyayı Her Hangi Bir Dosya Bulut Sistemine
+                            Yükleyip Buraya
+                            Yapıştırınız </small></p>
+                </div>
+
+
+                <div class="form-actions">
+                    <input type="reset" value="Sıfırla" class="form-button reset-button">
+                    <input type="submit" value="Gönder" class="form-button submit-button">
+                    <a href="anasayfa.html" class="form-button back-button">Ana Sayfaya Dön</a>
+                </div>
+            </form>
+        </div>
     </main>
 
 
