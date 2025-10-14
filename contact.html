@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLomi | Şablon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .vertical-hr-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: aqua;
+            height: 150px;
+        }
+
+        .vertical-hr {
+            /* dikey çizgi */
+            height: 100%;
+            /* container kadar uzansın */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <a href="main.html" class="site-title">CodeLomi.xyz</a>
+        <nav class="nav-buttons">
+            <a href="main.html" class="nav-button">Ana Sayfa</a>
+            <a href="blog.html" class="nav-button">Projeler & Blog</a>
+            <a href="hakkimda.html" class="nav-button">Hakkımda</a>
+            <a href="contact.html" class="nav-button">İletişim</a>
+        </nav>
+    </header><br><br><br><br>
+
+    <hr class="divider"><br>
+
+    <!-- ANA İÇERİK ALANI -->
+        <main class="main-content">
+            <div class="vertical-hr-container">
+                <span>Email : aetheriusy22@gmail.com <br>
+                    Youtube : CodeLomi <br>
+                    İnstagram : <a href="https://instagram.com/codelomi.xyz" target="_blank"
+                        class="nav-link">CodeLomi.xyz</a> <br>
+                    LinkEdln : <a href="https://www.linkedin.com/in/codelomixyz/" target="_blank"
+                        class="nav-link">CodeLomi.Dev</a>
+                </span>
+            </div>
+
+
+            <!-- FORM -->
+            <form class="contact-form" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label class="form-label" for="isim">Ad or Github Adınız :</label>
+                    <input class="form-input" type="text" name="isim" id="isim" placeholder="İsminizi giriniz" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="soyad">Soyad:</label>
+                    <input class="form-input" type="text" name="soyad" id="soyad" placeholder="Soyadınızı giriniz"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">E-posta:</label>
+                    <input class="form-input" type="email" name="E-posta" id="email" placeholder="example@example.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Telefon Numarası:</label>
+                    <input class="form-input" type="tel" name="telefon" id="phone" placeholder="05XX XXX XX XX"
+                        pattern="[0-9]{10,11}" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="dogum">Doğum Tarihi:</label>
+                    <input class="form-input" type="date" name="dogum" id="dogum" max="2020-12-31">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="mesaj">Mesajınız:</label>
+                    <textarea class="form-textarea" name="mesaj" id="mesaj" cols="20" rows="7"
+                        placeholder="Mesajınızı buraya yazınız"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="link">Dosya Link'i :</label>
+                    <input class="form-input" type="text" id="mesaj" title="Dosya URL'inizi Yapıştırınız"
+                        placeholder="Dosya URL'sini Yapıştırınız">
+                    <p style="opacity: 0.6;"><small>Lütfen Göndereceğiniz Dosyayı Her Hangi Bir Dosya Bulut Sistemine
+                            Yükleyip Buraya
+                            Yapıştırınız </small></p>
+                </div>
+
+
+                <div class="form-actions">
+                    <input type="reset" value="Sıfırla" class="form-button reset-button">
+                    <input type="submit" value="Gönder" class="form-button submit-button">
+                    <a href="main.html" class="form-button back-button">Ana Sayfaya Dön</a>
+                </div>
+            </form>
+            </div>
+        </main><br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("sQVK3W9J-IfjY-dlp"); // EmailJS Dashboard → Integration → User ID
+        })();
+
+        function sendEmail(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_6dcj24r', 'template_atccmms', e.target)
+                .then(() => {
+                    window.location.href = "basarili.html"; // başarılı sayfasına yönlendir
+                }, (error) => {
+                    alert("Hata oluştu: " + JSON.stringify(error));
+                });
+        }
+    </script>
+    <hr class="divider">
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p class="footer-text">
+            © 2025 - Telif Hakları
+            <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.
+        </p>
+        <div class="footer-icons" style="font-size:20px; ">
+            <a href="https://github.com/Codelomi" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

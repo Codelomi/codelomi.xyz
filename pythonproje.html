@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Foto/1codelomi.png">
     <meta name="description" content="CodeLomi Sayfa">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         mark {
@@ -24,42 +23,35 @@
             border: none;
             box-shadow: 3px 4px 6px #FFF;
             transition: all 0.3s ease;
-            font-size: 25px;
+            font-size: 20px;
         }
     </style>
-
 </head>
 
 <body class="site-body">
+    <!-- HEADER -->
     <header class="site-header">
-        <h2 class="site-title" translate="no"><a href="index.html" class="nav-link"><i>CodeLomi</i></a></h2>
-        <nav class="main-navigation">
-            <a class="nav-link" href="blog.html"><button class="nav-button">Blog</button></a>
-            <a class="nav-link" href="hakimizda.html"><button class="nav-button">Hakkımda</button></a>
-            <a class="nav-link" href="form.html"><button class="nav-button">Contact Me</button></a>
-            <div>
-                <input type="checkbox" class="checkbox" id="checkbox">
-                <label for="checkbox" class="checkbox-label">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                    <span class="ball"></span>
-                </label>
-                <script src="theme.js"></script>
-            </div>
-
+        <a href="main.html" class="site-title">CodeLomi.xyz</a>
+        <nav class="nav-buttons">
+            <a href="main.html" class="nav-button">Ana Sayfa</a>
+            <a href="blog.html" class="nav-button">Projeler & Blog</a>
+            <a href="hakimizda.html" class="nav-button">Hakkımda</a>
+            <a href="contact.html" class="nav-button">İletişim</a>
         </nav>
-    </header><br><br>
-    <hr class="divider"><br>
+    </header><br><br><br><br>
 
+    <hr class="divider">
+
+    <!-- ANA İÇERİK -->
     <main class="main-content">
         <h4 class="welcome-title">Python Projesi: El ve Yüz Tanıma ile Etkileşimli Sistem</h4>
-        <h6 class="welcome-subtitle">İşte Python projenimin detaylı açıklaması: <br><br>
-            <mark>Proje Hakkında Genel Bakış</mark> <br><br>
-            <b>Python Projesi: El ve Yüz Tanıma ile Etkileşimli Sistem </b><br>
+        <h6 class="welcome-subtitle">İşte Python projenimin detaylı açıklaması:</h6> <br><br>
+            <p><mark>Proje Hakkında Genel Bakış</mark></p> <br><br>
+            <p><b>Python Projesi: El ve Yüz Tanıma ile Etkileşimli Sistem</p> </b><br>
 
             <b>Projeye Genel Bakış</b><br><br>
 
-            Bu yenilikçi Python projesi, bilgisayar kamerasını kullanarak gerçek zamanlı el ve yüz tanıma
+            <p>Bu yenilikçi Python projesi, bilgisayar kamerasını kullanarak gerçek zamanlı el ve yüz tanıma
             teknolojilerini bir araya getiriyor. Modern bilgisayar vizyonu tekniklerini kullanarak, kullanıcıların el
             hareketleriyle doğal bir şekilde etkileşim kurmasına olanak tanıyan bu sistem, hem eğlenceli hem de pratik
             kullanım senaryoları sunuyor.
@@ -78,9 +70,9 @@
 
             Geliştiriciler bu temel altyapıyı kullanarak daha karmaşık el hareketi tanıma sistemleri oluşturabilir, özel
             kullanım durumlarına uyarlayabilir veya farklı tetikleme mekanizmaları ekleyerek projeyi
-            zenginleştirebilirler. <br><br>
+            zenginleştirebilirler.</p> <br><br>
 
-            <b>Teknik Altyapı ve Yöntemler </b><br><br>
+            <p><b>Teknik Altyapı ve Yöntemler </b><br><br>
 
             Proje, Python programlama dili üzerine inşa edilmiş olup, bilgisayarlı görü ve makine öğrenimi tekniklerini
             harmanlayarak çalışmaktadır. MediaPipe kütüphanesinin sağladığı önceden eğitilmiş modeller sayesinde, yüksek
@@ -126,7 +118,8 @@
             otomasyon uygulamaları için yeni olanaklar sunabilir.
 
             Güvenlik ve gizlilik özelliklerinin geliştirilmesi, sistemin ticari uygulamalarda kullanımını daha uygun
-            hale getirebilir. Veri şifreleme ve kullanıcı kimlik doğrulama mekanizmalarının eklenmesi, projenin kurumsal
+            hale getirebilir. Veri şifreleme ve kullanıcı kimlik doğrulama mechanizmalarının eklenmesi, projenin
+            kurumsal
             düzeyde kabul görmesine katkı sağlayabilir.
         </h6>
 
@@ -136,7 +129,7 @@
         <h4>1. Kütüphaneler ve Bağımlılıklar</h4><br><br>
 
         <div class="kutuphane" style="width: 50%;margin: auto;">
-            <p style="color: wheat;">
+            <p style="color: rgb(0, 255, 145);">
                 1- <b>import cv2 <br>
                     2- import mediapipe as mp <br>
                     3- from collections import deque <br>
@@ -153,7 +146,7 @@
         <br>
 
         <div class="kutuphane" style="width: 60%;margin: auto;">
-            <p style="color: wheat;">1- <b>MAX_PATH_LEN = 64 # El izi için maksimum nokta sayısı <br><br>
+            <p style="color: rgb(0, 255, 145);">1- <b>MAX_PATH_LEN = 64 # El izi için maksimum nokta sayısı <br><br>
 
                     2- SMOOTHING = 0.7 # Hareket yumuşatma katsayısı (0-1 arası) <br><br>
 
@@ -167,7 +160,6 @@
 
                     7- TRIGGER_REGION = (500, 150, 600, 300) # Dosya açma tetikleyici bölgesi (x1, y1, x2, y2)</b> </p>
         </div>
-
 
         <br><br>
 
@@ -233,7 +225,7 @@
             <li>Gerçek zamanlı FPS göstergesi.</li>
             <li>El tipi (sağ/sol) ve açık parmak sayısı bilgisi.</li>
             <li>Tetikleme bölgesinin görsel olarak işaretlenmesi.</li>
-            <li>Başparmak–işaret parmağı mesafesinin ekranda gösterilmesi.</li>
+            <li>Başparmak-işaret parmağı mesafesinin ekranda gösterilmesi.</li>
             <li>İsteğe bağlı el işaretleri ve el izi çizimleri.</li>
         </ul>
 
@@ -281,50 +273,27 @@
         <br><br>
 
         <p style="font-size: 15px; text-align: center;"> Eğer bu projeyi geliştirmek isterseniz Lütfen <a
-                style="color: greenyellow;" href="form.html">Bize Ulaşın</a> Kısmından bildiriniz</p>
-
-    </main>
-
-
-    <br>
+                style="color: greenyellow;" href="contact.html">Bize Ulaşın</a> Kısmından bildiriniz</p>
+    </main><br><br>
 
     <hr class="divider">
+
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <p class="footer-text">© 2025 - Telif Hakları <a class="footer-link" href="https://instagram.com/codelomi.xyz"
-                target="_blank">CodeLomi'e Aittir</a>.</p>
-        <div class="sosyal-ikonlar"><a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" target="_blank"><img
-                    src="Foto/youtube.webp" alt=""></a><br><a href="https://github.com/Codelomi" target="_blank"><img
-                    style="width: 50px;" src="Foto/github.png" alt=""></a>
+        <p class="footer-text">
+            © 2025 - Telif Hakları
+            <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.
+        </p>
+        <div class="footer-icons">
+            <a href="https://github.com/Codelomi" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" class="icon" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/codelomi.xyz" class="icon" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/codelomixyz/" class="icon" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
         </div>
     </footer>
-
-    <script>
-        function copyCode(button) {
-            // Butonun bulunduğu kartı bul
-            const card = button.closest('.card');
-            // Kart içindeki textarea'yı seç
-            const codeTextarea = card.querySelector('textarea');
-
-            // Textarea'daki kodu kopyala
-            navigator.clipboard.writeText(codeTextarea.value)
-                .then(() => {
-                    // Başarılı mesajı
-                    const originalText = button.innerHTML;
-                    button.innerHTML = '<i class="fas fa-check"></i> Kopyalandı!';
-                    button.classList.add('copied');
-
-                    // 2 saniye sonra orijinal haline dön
-                    setTimeout(() => {
-                        button.innerHTML = originalText;
-                        button.classList.remove('copied');
-                    }, 2000);
-                })
-                .catch(err => {
-                    console.error('Kopyalama hatası: ', err);
-                    alert('Kopyalama başarısız oldu. Lütfen tekrar deneyin.');
-                });
-        }
-    </script>
 </body>
 
 </html>

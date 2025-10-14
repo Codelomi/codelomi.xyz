@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLomi | AnaSayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="main.html">
+            <div class="site-title">CodeLomi.xyz</div>
+        </a>
+        <div class="nav-buttons">
+            <a href="main.html"><button class="nav-button">Ana Sayfa</button></a>
+            <a href="blog.html"><button class="nav-button">Projeler & Blog</button></a>
+            <a href="hakkimda.html"><button class="nav-button">Hakkımda</button></a>
+            <a href="contact.html"><button class="nav-button">İletişim</button></a>
+        </div>
+    </header><br><br><br><br>
+    <hr class="divider">
+    <main class="main-content">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eius perspiciatis quasi cum quia debitis
+                suscipit dolor id aliquid optio rerum, rem temporibus tenetur eum illo quidem aspernatur placeat
+                blanditiis. Adipisci perspiciatis rem, aspernatur fugit blanditiis veritatis ducimus aliquam quaerat
+                dicta deserunt minima recusandae aut numquam tempora. Aliquid modi beatae id repellendus cum eum! Sit
+                eius ad vero quod officiis quae veniam dignissimos similique rem a pariatur cum minima, nam quis beatae
+                amet modi harum voluptatem suscipit culpa quam atque sed error quas. Magni voluptate beatae, excepturi
+                maiores voluptatum, sed quae asperiores mollitia, autem soluta unde fugiat. Ipsum, cum rerum!</p>
+        </div><br>
+        <div class="gunun-sozu" id="gununSozu">
+            <p id="gununSozu"
+                style=" text-align: center; color: #3add5b; text-shadow: 0 0 2px rgba(100, 255, 141, 0.653);transition: all 0.3s ease-in-out;">
+                Söz yükleniyor...</p>
+    </main>
+    <hr class="divider">
+
+    <footer class="site-footer">
+        <p class="footer-text">
+            © 2025 - Telif Hakları
+            <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.
+        </p>
+        <div class="footer-icons" style="font-size:20px; ">
+            <a href="https://github.com/Codelomi" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" class="icon" target="_blank"><i class="fab fa-youtube"  ></i></a>
+            <a href="https://instagram.com/codelomi.xyz" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/codelomixyz/" class="icon" target="_blank"><i class="fab fa-linkedin" ></i></a>
+        </div>
+    </footer>
+
+
+    <script>
+        const sozler = [
+            '"Kod yazmak sihirbazlıktır - imkansızı mümkün kılarsın"',
+            '"Debug yapmak: Sonsuz sabır testidir"',
+            '"Her bug bir öğrenme fırsatıdır"',
+            '"Clean code, temiz düşüncenin yansımasıdır"',
+            '"Yazılım geliştirme bir sanattır"',
+            '"Konsolda "Hello World" yazdıran ilk andaki heyecan hiç bitmez"',
+            '"Stack Overflow olmasaydı, hepimiz kaybolurduk"',
+            '"Git commit: Bugün de bir şeyler başardım"',
+            '"Yazılımcının kahvesi, kodun yakıtıdır"',
+            '"404: Motivation not found - ama yine de devam ediyoruz"',
+            '"Kodun çalıştığı an: Dünyanın en güzel hissi"',
+            '"Yazılımda en iyi çözüm, en basit olandır"',
+            '"Her proje bir maceradır"',
+            '"Kod yazarken zamanın nasıl geçtiğini anlamazsın"',
+            '"Yazılımcı olmak, sürekli öğrenmek demektir"',
+            '"Teknoloji değişir, algoritmalar kalır"',
+            '"Kodunuz sizin imzanızdır"',
+            '"Bugünün kodu, yarının temelidir"',
+            '"Yazılım dünyayı değiştirir"',
+            '"Kod yazmak, puzzle çözmek gibidir"',
+            '"Ne izliyon Git proje kodla / yap lo"'
+        ];
+
+        const sozElementi = document.getElementById("gununSozu");
+        const rastgeleIndex = Math.floor(Math.random() * sozler.length);
+        sozElementi.textContent = sozler[rastgeleIndex];
+    </script>
+</body>
+
+</html>
