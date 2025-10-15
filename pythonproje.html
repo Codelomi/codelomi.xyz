@@ -11,19 +11,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        mark {
-            background: linear-gradient(to right, #4a6491, #85b2ff);
-            border-radius: 10px;
-            padding: 3px;
-            border: none;
-            transition: all 0.3s ease;
+        .project-section {
+            width: 80%;
+            margin: 80px auto;
+            font-family: 'Fira Code', monospace;
+            line-height: 1.7;
         }
 
-        mark:hover {
-            border: none;
-            box-shadow: 3px 4px 6px #FFF;
-            transition: all 0.3s ease;
-            font-size: 20px;
+        .project-title {
+            color: #bb86fc;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            color: #a0a0a0;
+            text-align: center;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+
+        h3 {
+            color: #bb86fc;
+            margin-top: 40px;
+        }
+
+        h4 {
+            color: #a971ff;
+            margin-top: 30px;
+        }
+
+        ul {
+            margin-left: 30px;
+        }
+
+        mark {
+            background: none;
+            color: #00ffa3;
+        }
+
+        .code-block {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Fira Code', monospace;
+            color: #00ffa3;
+            border: 1px solid #2d2d2d;
+            overflow-x: auto;
+            box-shadow: 0 0 10px rgba(155, 0, 255, 0.2);
         }
     </style>
 </head>
@@ -44,241 +81,136 @@
 
     <hr class="divider">
 
-    <!-- ANA İÇERİK -->
-    <main class="main-content">
-        <h4 class="welcome-title">Python Projesi: El ve Yüz Tanıma ile Etkileşimli Sistem</h4>
-        <h6 class="welcome-subtitle">İşte Python projenimin detaylı açıklaması:</h6> <br><br>
-        <p><mark>Proje Hakkında Genel Bakış</mark></p> <br><br>
-        <p><b>Python Projesi: El ve Yüz Tanıma ile Etkileşimli Sistem</p> </b><br>
+    <section class="project-section">
+        <h2 class="project-title">Python Projesi: El ve Yüz Tanıma ile Etkileşimli Sistem</h2>
+        <h4 class="project-subtitle">Python ile geliştirilen yenilikçi bir görüntü işleme ve etkileşim projesi</h4>
 
-        <b>Projeye Genel Bakış</b><br><br>
+        <hr class="divider">
 
-        <p>Bu yenilikçi Python projesi, bilgisayar kamerasını kullanarak gerçek zamanlı el ve yüz tanıma
-            teknolojilerini bir araya getiriyor. Modern bilgisayar vizyonu tekniklerini kullanarak, kullanıcıların el
-            hareketleriyle doğal bir şekilde etkileşim kurmasına olanak tanıyan bu sistem, hem eğlenceli hem de pratik
-            kullanım senaryoları sunuyor.
+        <h3>📘 Projeye Genel Bakış</h3>
+        <p>
+            Bu proje, bilgisayar kamerası kullanılarak <strong>gerçek zamanlı el ve yüz tanıma</strong> teknolojilerini
+            bir araya getiren etkileşimli bir sistemdir.
+            <strong>MediaPipe</strong> ve <strong>OpenCV</strong> kütüphaneleri üzerine kurulmuştur.
+            Kullanıcılar yalnızca kamerayı kullanarak el hareketleriyle sistemle etkileşime geçebilir.
+            Örneğin, belirli bir bölgeye elinizi getirerek otomatik olarak bir dosya açabilir veya bir uygulamayı
+            başlatabilirsiniz.
+        </p>
+        <p>
+            Sistem, özellikle <strong>erişilebilirlik</strong> odaklı çözümler, sunum kontrolü veya interaktif oyun
+            deneyimleri geliştirmek isteyenler için uygundur.
+            Proje açık kaynaklı olup farklı alanlara genişletilebilir ve özelleştirilebilir bir altyapıya sahiptir.
+        </p>
 
-            Proje, Google'ın gelişmiş MediaPipe kütüphanesini temel alarak OpenCV ile entegre çalışıyor. Bu sayede
-            kullanıcılar, karmaşık kurulumlar veya ekstra donanımlar olmadan, sadece bilgisayarlarının kamerasını
-            kullanarak etkileşime geçebiliyorlar. Sistem, el hareketlerini algılayarak belirli komutları
-            tetikleyebiliyor - örneğin, ekranda belirlenmiş bir bölgeye elinizi getirdiğinizde otomatik olarak bir dosya
-            açılıyor veya belirlediğiniz bir uygulama başlatılıyor.
+        <h3>⚙️ Teknik Altyapı ve Yöntemler</h3>
+        <p>
+            Proje, <strong>Python</strong> dili üzerine inşa edilmiştir ve bilgisayarlı görü ile makine öğrenimi
+            tekniklerini birleştirir.
+            <strong>MediaPipe</strong> sayesinde yüksek doğrulukla el ve yüz landmark’ları tespit edilirken,
+            <strong>OpenCV</strong> ile gerçek zamanlı görüntü işleme yapılır.
+        </p>
+        <p>
+            Sistem modüler olarak tasarlanmıştır:
+        <ul>
+            <li>Kamera verisini alan <b>Capture Modülü</b></li>
+            <li>Analiz ve tespit işlemlerini yapan <b>Analysis Modülü</b></li>
+            <li>Sonuçları kullanıcıya sunan <b>Interface Modülü</b></li>
+        </ul>
+        Her bileşen düşük kaynak kullanımı için optimize edilmiştir.
+        </p>
 
-            Bu proje özellikle fiziksel engelli bireyler için bilgisayar erişilebilirliği sağlamak, sunumlar sırasında
-            el hareketleriyle kontrol imkanı sunmak veya interaktif oyun deneyimleri oluşturmak isteyen geliştiriciler
-            için ideal bir başlangıç noktası oluşturuyor. Açık kaynak kodlu yapısı sayesinde isteğe göre
-            genişletilebilir ve özelleştirilebilir olması, onu hem eğitim hem de profesyonel kullanım için değerli
-            kılıyor.
+        <h3>🧠 Uygulama Alanları</h3>
+        <ul>
+            <li>Eğitimde interaktif öğrenme ortamları</li>
+            <li>Sağlıkta rehabilitasyon ve fiziksel terapi uygulamaları</li>
+            <li>Perakende sektöründe sanal deneyim uygulamaları</li>
+            <li>Akıllı ev sistemleri ve otomasyon</li>
+        </ul>
 
-            Geliştiriciler bu temel altyapıyı kullanarak daha karmaşık el hareketi tanıma sistemleri oluşturabilir, özel
-            kullanım durumlarına uyarlayabilir veya farklı tetikleme mekanizmaları ekleyerek projeyi
-            zenginleştirebilirler.</p> <br><br>
-
-        <p><b>Teknik Altyapı ve Yöntemler </b><br><br>
-
-            Proje, Python programlama dili üzerine inşa edilmiş olup, bilgisayarlı görü ve makine öğrenimi tekniklerini
-            harmanlayarak çalışmaktadır. MediaPipe kütüphanesinin sağladığı önceden eğitilmiş modeller sayesinde, yüksek
-            doğruluk oranıyla el ve yüz landmark'larını tespit edebilmektedir. OpenCV entegrasyonu ise gerçek zamanlı
-            görüntü işleme ve kameradan alınan frame'lerin işlenmesi sürecini yönetmektedir.
-
-            Sistem mimarisi, modüler bir yaklaşım benimseyerek farklı bileşenlerin birbiriyle uyumlu çalışmasını
-            sağlamaktadır. Görüntü yakalama modülü, kamera beslemesini sürekli olarak işlerken, analiz modülü elde
-            edilen frame'ler üzerinde MediaPipe algoritmalarını çalıştırmaktadır. Sonuçlar, kullanıcı arayüzü modülü
-            tarafından işlenerek görsel geri bildirim sağlanmakta ve tetikleme mekanizması belirlenen koşullar
-            oluştuğunda ilgili aksiyonları gerçekleştirmektedir.
-
-            Performans optimizasyonu açısından, sistem kaynak kullanımını minimize etmek için çeşitli teknikler
-            uygulanmıştır. Frame işleme hızını artırmak amacıyla gereksiz hesaplamalardan kaçınılmış ve algoritma
-            verimliliği üzerine odaklanılmıştır. Ayrıca, kullanıcı deneyimini geliştirmek için yumuşatma teknikleri
-            uygulanarak hareket takibinde doğal bir his yaratılmıştır. <br><br>
-
-            <b>Uygulama Alanları ve Potansiyel Kullanım Senaryoları</b><br><br>
-
-            Bu projenin teknolojik altyapısı, çeşitli endüstriyel ve ticari uygulama alanlarında kullanıma uygundur.
-            Eğitim sektöründe, interaktif öğrenme ortamları oluşturmak için kullanılabilirken, perakende sektöründe
-            sanal deneyim odaklı uygulamalara entegre edilebilir. Sağlık sektöründe ise rehabilitasyon süreçlerinde
-            hareket takibi ve fiziksel terapi uygulamalarında destekleyici rol oynayabilir.
-
-            Teknolojinin geliştirilmesi ve ölçeklendirilmesi halinde, uzaktan kontrol gerektiren endüstriyel
-            uygulamalarda, özellikle de insan-makine etkileşiminin kritik olduğu durumlarda kullanılabilir. Ayrıca,
-            artırılmış gerçeklik ve sanal gerçeklik uygulamalarıyla entegrasyon potansiyeli bulunmaktadır.
-
-            Projenin açık kaynak kodlu yapısı, akademik çalışmalar ve araştırma projeleri için de değerli bir kaynak
-            oluşturmaktadır. Bilgisayarlı görü ve insan-bilgisayar etkileşimi alanlarında çalışan araştırmacılar için
-            temel bir framework sunarken, yeni başlayan geliştiriciler için de öğretici bir kaynak görevi görmektedir.
-            <br><br>
-
-            <b>Gelecek Geliştirmeler ve Potansiyel</b><br><br>
-
-            Mevcut implementasyon, gelecek geliştirmeler için sağlam bir temel oluşturmaktadır. Derin öğrenme
-            modellerinin entegrasyonu ile daha karmaşık el hareketlerinin tanınması sağlanabilir ve çoklu el takibi
-            özellikleri genişletilebilir. Bulut tabanlı işlem kapasitesi ile entegrasyon, sistemin daha karmaşık
-            hesaplamaları gerçekleştirebilmesine olanak tanıyabilir.
-
-            Mobil platformlara uyarlanması halinde, proje akıllı telefon ve tabletlerde kullanılabilir hale gelebilir ve
-            taşınabilirlik kazanabilir. IoT cihazlarıyla entegrasyon potansiyeli ise akıllı ev sistemleri ve endüstriyel
-            otomasyon uygulamaları için yeni olanaklar sunabilir.
-
-            Güvenlik ve gizlilik özelliklerinin geliştirilmesi, sistemin ticari uygulamalarda kullanımını daha uygun
-            hale getirebilir. Veri şifreleme ve kullanıcı kimlik doğrulama mechanizmalarının eklenmesi, projenin
-            kurumsal
-            düzeyde kabul görmesine katkı sağlayabilir.
-            </h6>
-
-            <br><br>
-
-        <h3>Detaylı Teknik Açıklama</h3>
-        <h4>1. Kütüphaneler ve Bağımlılıklar</h4><br><br>
-
-        <div class="kutuphane" style="width: 50%;margin: auto;">
-            <p style="color: rgb(0, 255, 145);">
-                1- <b>import cv2 <br>
-                    2- import mediapipe as mp <br>
-                    3- from collections import deque <br>
-                    4- import time <br>
-                    5- import os <br>
-                    6- import math <br></b>
-            </p>
+        <h3>🔬 Teknik Detaylar</h3>
+        <h4>1️⃣ Kullanılan Kütüphaneler</h4>
+        <div class="code-block">
+            <code>
+            import cv2<br>
+            import mediapipe as mp<br>
+            from collections import deque<br>
+            import time<br>
+            import os<br>
+            import math
+        </code>
         </div>
 
-        <br><br>
-
-        <h4>2. Yapılandırma Parametreleri</h4>
-
-        <br>
-
-        <div class="kutuphane" style="width: 60%;margin: auto;">
-            <p style="color: rgb(0, 255, 145);">1- <b>MAX_PATH_LEN = 64 # El izi için maksimum nokta sayısı <br><br>
-
-                    2- SMOOTHING = 0.7 # Hareket yumuşatma katsayısı (0-1 arası) <br><br>
-
-                    3- CAM_IDX = 0 # Kullanılacak kamera indeksi (0 varsayılan kamera) <br><br>
-
-                    4- DRAW_LANDMARKS = True # El işaret noktalarının çizilip çizilmeyeceği <br><br>
-
-                    5- DRAW_TRAIL = False # El izinin çizilip çizilmeyeceği <br><br>
-
-                    6- FILE_TO_OPEN = r"C:\Users\PC\Desktop\ornek.jpg" # Tetiklendiğinde açılacak dosya <br><br>
-
-                    7- TRIGGER_REGION = (500, 150, 600, 300) # Dosya açma tetikleyici bölgesi (x1, y1, x2, y2)</b> </p>
+        <h4>2️⃣ Yapılandırma Parametreleri</h4>
+        <div class="code-block">
+            <code>
+            MAX_PATH_LEN = 64  # El izi nokta sayısı<br>
+            SMOOTHING = 0.7  # Hareket yumuşatma katsayısı<br>
+            CAM_IDX = 0  # Kamera indeksi<br>
+            DRAW_LANDMARKS = True<br>
+            DRAW_TRAIL = False<br>
+            FILE_TO_OPEN = r"C:\Users\PC\Desktop\ornek.jpg"<br>
+            TRIGGER_REGION = (500,150,600,300)
+        </code>
         </div>
 
-        <br><br>
-
-        <h4>3. Ana Fonksiyonların Detaylı Açıklaması</h4><br>
-        <p><mark>fingers_up()</mark> Fonksiyonu <br><br>
-            Bu fonksiyon, elin hangi parmaklarının açık olduğunu tespit eder:</p><br>
+        <h4>3️⃣ Fonksiyonlar</h4>
         <ul>
-            <li>Başparmak: Elin sağ veya sol olmasına göre farklı logic kullanır</li>
-            <li>Diğer parmaklar: Parmak ucu ve bir alt eklemin konumlarını karşılaştırır</li>
-        </ul>
-        <br>
-        <p><mark>distance()</mark> Fonksiyonu<br><br>
-            İki nokta arasındaki Öklid mesafesini hesaplar (Pythagorean theorem)</p>
-        <br>
-        <p><mark>main()</mark> Fonksiyonu</p><br>
-        <p>Ana program akışını yönetir :</p>
-        <ul>
-            <li>Kamera bağlantısını açar</li>
-            <li>MediaPipe modellerini yükler</li>
-            <li>Sonsuz döngüde kareleri işler</li>
-            <li>Yüzleri tespit edip bulanıklaştırır</li>
-            <li>Elleri tespit edip analiz eder</li>
-            <li>Kullanıcı arayüzünü oluşturur</li>
-            <li>Tetikleme bölgesi kontrolü yapar</li>
+            <li><mark>fingers_up()</mark> → Açık parmakları tespit eder.</li>
+            <li><mark>distance()</mark> → İki nokta arasındaki mesafeyi hesaplar.</li>
+            <li><mark>main()</mark> → Kamera akışını yönetir, yüz ve el tespiti yapar, tetikleme kontrolünü yürütür.
+            </li>
         </ul>
 
-        <br><br>
-        <h4>4.Görüntü İşleme Adımları</h4>
-        <p>Yüz Bulanıklaştırma İşlemi :</p>
+        <h4>4️⃣ Görüntü İşleme Adımları</h4>
         <ul>
-            <li>MediaPipe Face Detection ile yüzler tespit edilir</li>
-            <li>Yüz bölgesi yukarı kaydırlır ve büyütülür (alın bölgesini kapsamak için)</li>
-            <li>Gaussian Blur uygulanarak yüz gizliliği sağlanır</li>
-            <li>Sınır kontrolleri yapılarak hata önlenir</li>
+            <li>Yüz tespiti ve Gaussian Blur ile gizlilik sağlanır.</li>
+            <li>El tespiti ve hareket analizi MediaPipe ile yapılır.</li>
+            <li>Başparmak–işaret parmağı arası mesafe hesaplanır.</li>
+            <li>Tetikleme bölgesi kontrol edilir ve eylem tetiklenir.</li>
         </ul>
 
-        <br><br>
-
-        <p>El Tespiti ve Analizi :</p>
+        <h4>5️⃣ Performans ve Optimizasyon</h4>
         <ul>
-            <li>MediaPipe Hands modeli ile el noktaları tespit edilir</li>
-            <li>Her el için işaret parmağı konumu yumuşatılır (SMOOTHING)</li>
-            <li>Parmakların açık/kapalı durumu analiz edilir</li>
-            <li>Başparmak ve işaret parmağı arası mesafe hesaplanır</li>
-            <li>İsteğe bağlı olarak el izi çizgileri oluşturulur (DRAW_TRAIL)</li>
+            <li>RGB dönüşümü sadece bir kez yapılır.</li>
+            <li><code>deque</code> ile sabit uzunlukta izleme.</li>
+            <li>Hareket yumuşatma ile daha kararlı takip.</li>
+            <li>Kamera aynalanarak kullanıcı deneyimi artırılır.</li>
         </ul>
 
-        <br><br>
-
-        <h4>5. Tetikleme Mekanizması</h4>
-        <p>Program, ekranın sağ tarafında belirlenen bir dikdörtgen bölgeyi (<code>TRIGGER_REGION</code>) izler.
-            Kullanıcı elini bu bölgeye getirdiğinde:</p>
+        <h4>6️⃣ Geliştirme Potansiyeli</h4>
         <ul>
-            <li>Bölge içinde el tespit edilir.</li>
-            <li><code>os.startfile()</code> ile <code>FILE_TO_OPEN</code> dosyası açılır.</li>
-            <li>Tekrarlı açmaların önüne geçmek için bir <i>flag</i> kullanılır.</li>
+            <li>Çoklu el hareketleri ve jest tanıma.</li>
+            <li>Sesli geri bildirim entegrasyonu.</li>
+            <li>Mobil ve web sürümleri.</li>
+            <li>Veri güvenliği ve şifreleme modülleri.</li>
         </ul>
 
-        <br><br>
-
-        <h4>6. Kullanıcı Arayüzü Özellikleri</h4>
+        <h4>🎯 Kullanım Senaryoları</h4>
         <ul>
-            <li>Gerçek zamanlı FPS göstergesi.</li>
-            <li>El tipi (sağ/sol) ve açık parmak sayısı bilgisi.</li>
-            <li>Tetikleme bölgesinin görsel olarak işaretlenmesi.</li>
-            <li>Başparmak-işaret parmağı mesafesinin ekranda gösterilmesi.</li>
-            <li>İsteğe bağlı el işaretleri ve el izi çizimleri.</li>
+            <li>Erişilebilirlik çözümleri (engelsiz etkileşim)</li>
+            <li>Sunum kontrolü</li>
+            <li>Interaktif oyun arayüzleri</li>
+            <li>Akıllı ev yönetimi</li>
+            <li>Eğitim, terapi ve hareket takibi</li>
         </ul>
+    </section>
 
-        <br><br>
 
-        <h4>7. Performans Optimizasyonları</h4>
-        <ul>
-            <li>RGB dönüşümü kare başına yalnızca bir kez yapılır.</li>
-            <li>Hareket yumuşatma (SMOOTHING) ile daha stabil takip.</li>
-            <li>Bellek yönetimi için <code>deque</code> ile sabit uzunluklu iz.</li>
-            <li>Kamera görüntüsü aynalanır (kullanıcı deneyimi).</li>
-        </ul>
+    <br><br>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/WjHPqtlJU6o" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
 
-        <br><br>
+    <br><br>
 
-        <h4>Potansiyel Geliştirme Alanları</h4>
-        <ul>
-            <li>Çoklu el hareketi destekli komutlar.</li>
-            <li>Sesli geri bildirim.</li>
-            <li>Öğrenme modu (kullanıcı tanımlı jestler).</li>
-            <li>Çapraz platform (Linux/macOS) uyumluluğu.</li>
-            <li>Ağ üzerinden kontrol (UDP/TCP).</li>
-            <li>Gelişmiş yüz anonimleştirme teknikleri.</li>
-        </ul>
+    <p style="font-size: 15px; text-align: center;"> Eğer bu projeyi geliştirmek isterseniz Lütfen <a
+            style="color: greenyellow;" href="contact.html">Bize Ulaşın</a> Kısmından bildiriniz</p>
+    <br><br>
 
-        <br><br>
-
-        <h4>Kullanım Senaryoları</h4>
-        <ul>
-            <li>Engelsiz etkileşim ve erişilebilirlik.</li>
-            <li>Sunum kontrolü.</li>
-            <li>Fiziksel etkileşimli oyun arayüzleri.</li>
-            <li>Akıllı ev kontrolü.</li>
-            <li>Eğitim ve rehabilitasyon (hareket takibi).</li>
-        </ul>
-
-        <br><br>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/WjHPqtlJU6o" title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <br><br>
-
-        <p style="font-size: 15px; text-align: center;"> Eğer bu projeyi geliştirmek isterseniz Lütfen <a
-                style="color: greenyellow;" href="contact.html">Bize Ulaşın</a> Kısmından bildiriniz</p>
-    </main><br><br>
-
-    <hr class="divider">
+    <hr style="margin-bottom: 90px;" class="divider">
 
     <!-- FOOTER -->
     <footer class="site-footer">

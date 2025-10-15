@@ -9,6 +9,83 @@
     <link rel="icon" href="Foto/1codelomi.png">
     <meta name="description" content="CodeLomi Sayfa">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            
+        }
+
+        .blog-content h3 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .blog-content p {
+            margin-bottom: 18px;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .blog-content big b {
+            color: #2980b9;
+            font-size: 18px;
+            display: block;
+            margin: 25px 0 15px 0;
+        }
+
+        .blog-content ul {
+            background-color: rgb(74, 66, 57);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+
+        .blog-content li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .blog-content b[style*="color: aqua"] {
+            color: #00bcd4 !important;
+            font-weight: bold;
+        }
+
+        .blog-content small {
+            font-size: 13px;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-content .nav-link {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-content .nav-link:hover {
+            text-decoration: underline;
+            color: #c0392b;
+        }
+
+        .blog-content br {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body class="site-body">
@@ -28,114 +105,101 @@
     <hr class="divider">
 
     <!-- ANA İÇERİK -->
-    <main class="main-content">
+
+    <div class="blog-content">
         <h3><b>Python Projesi : Yapay Zeka Destekli Discord Botu</b></h3>
-        <br>
+
         <p>Efenim merahabalar;<br>Bugün sizlere Bir diğer python projemi detaylarını ve nasıl yapıldığını hangi
             kütüphanelerin kullanıldığından bahsedeceğim. Başlamadan önce isterseniz size ne işe yaradığını, neden
-            yapıtğımı, nerden aklıma geldi diye bahsetemek isterim.
-            <br><br>
-            <big><b>Ne İşe Yarıyo</b></big><br>
-            <br>Ben bunu aslında r/cs.core
+            yapıtğımı, nerden aklıma geldi diye bahsetemek isterim.</p>
+
+        <big><b>Ne İşe Yarıyo</b></big>
+        <p>Ben bunu aslında r/cs.core
             <a href="https://disboard.org/tr/server/1368610668848087100" class="nav-link" target="_blank">Discord</a>
             Topluluğum için
             yaptım hem Karşılama Hemde Vedalaşma için kodladım. Hani örnek olarak şu şekilde <br><br> + Merhabalar
             beyler
             nasılsınız <br> -(dbot) Merhabalar efendim nasılsınız <br> +Sa <br> -Aleyküm selam [@user] Nasılsın <br><br>
             Gibi diyaloglarda işe yarıyo Ama maalesef halen aktif bir sunucum yok, 7/24 açık tutamıyorum. Bari tek bende
-            kalacağına millet de faydalansın dedim → GitHub'a attım, sonra da burada paylaşmaya karar verdim. <br><br>
+            kalacağına millet de faydalansın dedim → GitHub'a attım, sonra da burada paylaşmaya karar verdim.
+        </p>
 
-            <big><b>Neden Yaptım</b></big>
-
-            <br><br>
-            Şimdi diyeceksiniz ki: "La sen bunu niye yaptın?"<br>
-            Anlatıyom… <br><br>
-
-            Ben yazılıma yeni başladığım zamanlardı, 1-2 ay olmuş. Arkadaşımın sunucusundaydım. Dedim ki: <br>
+        <big><b>Neden Yaptım</b></big>
+        <p>Şimdi diyeceksiniz ki: "La sen bunu niye yaptın?"<br>
+            Anlatıyom…</p>
+        <p>Ben yazılıma yeni başladığım zamanlardı, 1-2 ay olmuş. Arkadaşımın sunucusundaydım. Dedim ki: <br>
             "Olm ben bot nasıl yapıcam." <br>
             O da dedi: <br>
-            "Gel sesliye, anlatırım." <br><br>
-
-            Ben sanıyorum ki bu Discord'daki bütün botları Discord ekibi yapıyor. Meğer öyle değilmiş. Arkadaş bana <br>
+            "Gel sesliye, anlatırım."</p>
+        <p>Ben sanıyorum ki bu Discord'daki bütün botları Discord ekibi yapıyor. Meğer öyle değilmiş. Arkadaş bana <br>
             dedi: <br>
             "Bak şurdan token alacan, şu ayarı açacan, şunu yapıcan…" <br>
             E tabi ben bi şey anlamıyorum. Sonra dedi ki" <br>
-            "Olm çok kolay lan, git Chat###'ye sor." <br>
+            "Olm çok kolay lan, git Chat###'ye sor."</p>
+        <p>Ben de gittim, sordum, kurcaladım, derken ilk botumu yazdım.</p>
 
-            Ben de gittim, sordum, kurcaladım, derken ilk botumu yazdım. <br><br>
-
-            <big><b>Ne Kadar Sürdü? Ne Sorunlar Çıktı?</b></big><br><br>
-
-            Valla çok sürmedi (2 hafta sürdü) ama her adımda kafam karıştı. Mesela botu sunucuya eklemek yetmiyor,
+        <big><b>Ne Kadar Sürdü? Ne Sorunlar Çıktı?</b></big>
+        <p>Valla çok sürmedi (2 hafta sürdü) ama her adımda kafam karıştı. Mesela botu sunucuya eklemek yetmiyor,
             Python üzerinden
             token ile çalıştırmak lazımmış. Onu bilmeyip bir gün uğraştım. Sonra hataları çözdüm, derken ortaya bu proje
-            çıktı.
-            <br><br>
+            çıktı.</p>
 
-            <big><b>Dosyalar / Neler gerekli</b></big><br>
-
+        <big><b>Dosyalar / Neler gerekli</b></big>
         <ul>
             <li>bir adet .env dosyası</li>
             <li>Ve bir adet .py dosyası işte</li>
             <li>Discord Developer sitesinde alacağınız token</li>
             <li>OpenRauter kullanıyorum o yüzden bi de onunda tokeni lazım</li>
             <li>Son olarakta proje içinde zaten belli yazmışım (belki, bilmiyom) log kanalı vesaire</li>
-        </ul><br><br>
+        </ul>
 
-        <p>
-            Bu kadar işte la çok fazla birşey gerekli değil zaten bu projeyi nasıl yaptığımı anlattıktan sonra en alta
+        <p>Bu kadar işte la çok fazla birşey gerekli değil zaten bu projeyi nasıl yaptığımı anlattıktan sonra en alta
             koyarım bağlantısını işte eğer uğraşmak istemiyorusanız zaten uğraşmayın 800 satır kodmu ne işte 2 haftada
             anca
             bitti "sen bunu kesin tek başına yapıp bitiremedin" diyeceğinizi düşünüyorum evet doğru dediniz tek başıma
             yazmadım zaten yapay zeka kullandım hem tabi kullancam o kadar teknoloji gelişsin kullanmayam olmaz öyle şey
-            kullandım tabi ama bütün projeyi ona yaptırmadım Yani
+            kullandım tabi ama bütün projeyi ona yaptırmadım Yani</p>
 
-            <br><br>
-
-
-            <big><b>OpenRouter & Discord Bot Token Alma</b></big><br><br>
-
-            Hocam size ilk başta discord developerdan token nasıl alınır onu söylemem lazım başlamadan uyarı geçeyim bu
+        <big><b>OpenRouter & Discord Bot Token Alma</b></big>
+        <p>Hocam size ilk başta discord developerdan token nasıl alınır onu söylemem lazım başlamadan uyarı geçeyim bu
             aldığınız tokeni kimse ile başlamayın hem openrauterın hemmde discord tokeni bu discordda hesabınızın
             çalınması olasılığını yüksek tutar openrauter da ise sadece kullanım açısından şey gibi düşünün oprt
             (openrauter) sizi mesela tokende 8 dolara kısıtllıyo kulllanım ve soru açısından eğer birisi eline geçirirse
             bu oprt tokenini hizluca bitirmiş olacaktıır o yüzden .env dosyasında tutmak hem iyi bi açıdan eğer birisi
-            sizden botun kodunu isterse (zaten ben bu yazının en sonunda vermiş olucam buraya ynlendirmiş olursunuz)
+            sizden botun kodunu isterse (zaten ben bu yazının en sonunda vermiş olucam buraya ynlendirmiş olursunuz)</p>
 
-
-            <big><b>Bilmeyenler İçin Discord Botu İçin Token Alma </b></big><br><br>
-
-            İlk Başta <a href="https://discord.com/developers" class="nav-link" target="_blank">Discord for
+        <big><b>Bilmeyenler İçin Discord Botu İçin Token Alma</b></big>
+        <p>İlk Başta <a href="https://discord.com/developers" class="nav-link" target="_blank">Discord for
                 Developer</a>'a giriş
             yapıyoruz ardından Applications kısmına gelip
-            "New Applications Diyoruz" <br><br> <img src="Foto/creatanapp.jpg" alt="Bot Oluşturma"> <br> ardından işte
-            ismini falan
-            seçiyoruz Team Kısmından Eğer tabi Team ınız varsa seçebilirsiniz yoksa seçmenize gerek yok create
-            Tıkladıktan sonra robotmusun testi çıkıyoda <br>
-            <br><img src="Foto/robottesti.jpg" alt="Robot Testi Görseli"> <br> (yok robotum hamına), neyse Nerde
-            kalmıştı işte sonra robot
-            testini
-            geçip Karşınıza çıkan bu <br><br><img src="Foto/botss.jpg" alt="Bot"><br><br>
-            sayfada işte isimini açıklamasını falan gösteriyo şimdi ben size gösterebilmek açısından Bir bot oluşturdum
-            Şimdi bir diğer yapmamız gereken şey ise <br><br><img src="Foto/dcyealma.jpg" alt=""><br><br> Bu sayfadaki
-            Link i
-            kopyalayıp Discord Topluluğunuza Alabilirsiniz ve böylece daha kodlanmayan bir botunuz vaar hayırlı uğurlu
-            olsun. <br><br>
-            Şimdi ise OpenRauter'dan APİ almanız lazım onuda hemen göstereyim <br>
+            "New Applications Diyoruz"</p>
+        <img src="Foto/creatanapp.jpg" alt="Bot Oluşturma">
+        <p>ardından işte ismini falan seçiyoruz Team Kısmından Eğer tabi Team ınız varsa seçebilirsiniz yoksa seçmenize
+            gerek yok create
+            Tıkladıktan sonra robotmusun testi çıkıyoda</p>
+        <img src="Foto/robottesti.jpg" alt="Robot Testi Görseli">
+        <p>(yok robotum hamına), neyse Nerde kalmıştı işte sonra robot testini
+            geçip Karşınıza çıkan bu</p>
+        <img src="Foto/botss.jpg" alt="Bot">
+        <p>sayfada işte isimini açıklamasını falan gösteriyo şimdi ben size gösterebilmek açısından Bir bot oluşturdum
+            Şimdi bir diğer yapmamız gereken şey ise</p>
+        <img src="Foto/dcyealma.jpg" alt="">
+        <p>Bu sayfadaki Link i kopyalayıp Discord Topluluğunuza Alabilirsiniz ve böylece daha kodlanmayan bir botunuz
+            vaar hayırlı uğurlu olsun.</p>
+        <p>Şimdi ise OpenRauter'dan APİ almanız lazım onuda hemen göstereyim</p>
+        <a href="https://openrouter.ai/" class="nav-link">OpenRauter'a Kayıt / Üye</a> Oluyoruz
+        <img src="Foto/oprgiris.jpg" alt="OpenRauter Home Page">
+        <p>Karşınıza bu sayfa geldikten sonra Keys kısmına basıp ardında bu sayfaya yönlendirliyoruz</p>
+        <img src="Foto/apikeys.jpg" alt="Create API Keys">
+        <p>bu sayfadandada işte yapay zeka için API mizi alıyoruz. aldıktan sonrada bu sefer .env dosyasına Discord
+            Token + OpenRauter API'sini koyuyoruz. Zaten proje için Token, API almayı bilmeyenler için büyük çoğunluğunu
+            anlattım artık geri kalanı size kaldı yapıştırmaktır falan filan zaten botun içinde 'sa' vb. denilince ne
+            söyleyeceğini belli etim list ile rastgele birşekilde cevap veriyo isterseniz sizde ekleyebilirsiniz
+            listelere zaten belli nereye ekleyeceğiniz artık size kalmış değiştirmek küfür algılıyo ve timeout atıyo
+            mesela siz timeout attığınızda kimin attığını neden attığını ve saat kaçta attığnı gösteriyo şimdi sizlere
+            ise ne gibi komutların var olduğunu anlatcam.</p>
 
-            <a href="https://openrouter.ai/" class="nav-link">OpenRauter'a Kayıt / Üye</a> Oluyoruz <br><br> <img
-                src="Foto/oprgiris.jpg" alt="OpenRauter Home Page"><br><br>
-            Karşınıza bu sayfa geldikten sonra Keys kısmına basıp ardında bu sayfaya yönlendirliyoruz <br><br>
-            <img src="Foto/apikeys.jpg" alt="Create API Keys"><br> bu sayfadandada işte yapay zeka için API mizi
-            alıyoruz. aldıktan sonrada bu sefer .env dosyasına Discord Token + OpenRauter API'sini koyuyoruz. Zaten
-            proje için Token, API almayı bilmeyenler için büyük çoğunluğunu anlattım artık geri kalanı size kaldı
-            yapıştırmaktır falan filan zaten botun içinde 'sa' vb. denilince ne söyleyeceğini belli etim list ile
-            rastgele birşekilde cevap veriyo isterseniz sizde ekleyebilirsiniz listelere zaten belli nereye
-            ekleyeceğiniz artık size kalmış değiştirmek küfür algılıyo ve timeout atıyo mesela siz timeout attığınızda
-            kimin attığını neden attığını ve saat kaçta attığnı gösteriyo şimdi sizlere ise ne gibi komutların var
-            olduğunu anlatcam. <br><br>
-
-            <big><b>Discord Bot Komutları</b></big>
+        <big><b>Discord Bot Komutları</b></big>
         <ul>
             <li><b style="color: aqua;">/say</b> <small>Bot Aracılığıyla mesaj gönderir</small></li>
             <li><b style="color: aqua;">/kişisayısı</b> <small>Sununcu istatistiklerini gösterir (Geliştirici rolü
@@ -147,17 +211,14 @@
             </li>
             <li><b style="color: aqua;">/rolgerial</b> <small>Bir kişiden veya herkesten rol alır</small></li>
             <li><b style="color: aqua;">!silinen</b> <small>En son silinen mesajı gösterir</small></li>
-        </ul><br><br>
+        </ul>
 
         <p>Şuan bir kaç dosya düzenlemesi yapıyorum projeyi size daha iyi sunmak için kısa bir an içinde hem video
-            çekerde
-            koyarım siz merak etmeyin hadi seviliyorsunuz iyi günlerr.İnşAllah okurken eğlenmişsinizdir.</p>
-        </p>
+            çekerde koyarım siz merak etmeyin hadi seviliyorsunuz iyi günlerr.İnşAllah okurken eğlenmişsinizdir.</p>
+    </div>
+    <br><br><br>
 
-        </p>
-    </main><br><br><br>
-
-    <hr class="divider">
+    <hr style="margin-bottom: 90px;" class="divider">
 
     <!-- FOOTER -->
     <footer class="site-footer">

@@ -15,6 +15,7 @@
             gap: 10px;
             color: aqua;
             height: 150px;
+            margin-left: 1%;
         }
 
         .vertical-hr {
@@ -42,18 +43,18 @@
     <hr class="divider"><br>
 
     <!-- ANA İÇERİK ALANI -->
-    <main class="main-content">
-        <div class="vertical-hr-container">
-            <span>Email : aetheriusy22@gmail.com <br>
-                Youtube : CodeLomi <br>
-                İnstagram : <a href="https://instagram.com/codelomi.xyz" target="_blank"
-                    class="nav-link">CodeLomi.xyz</a> <br>
-                LinkEdln : <a href="https://www.linkedin.com/in/codelomixyz/" target="_blank"
-                    class="nav-link">CodeLomi.Dev</a>
-            </span>
-        </div>
 
+    <div class="vertical-hr-container">
+        <span>Email : aetheriusy22@gmail.com <br>
+            Youtube : <a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" target="_blank" class="nav-link">CodeLomi</a> <br>
+            İnstagram : <a href="https://instagram.com/codelomi.xyz" target="_blank" class="nav-link">CodeLomi.xyz</a>
+            <br>
+            LinkEdln : <a href="https://www.linkedin.com/in/codelomixyz/" target="_blank"
+                class="nav-link">CodeLomi.Dev</a>
+        </span>
+    </div>
 
+    <div class="form-main">
         <!-- FORM -->
         <form class="contact-form" onsubmit="sendEmail(event)">
             <div class="form-group">
@@ -102,11 +103,12 @@
             <div class="form-actions">
                 <input type="reset" value="Sıfırla" class="form-button reset-button">
                 <input type="submit" value="Gönder" class="form-button submit-button">
-                <a href="main.html" class="form-button back-button">Ana Sayfaya Dön</a>
+                <a href="index.html" class="form-button back-button">Ana Sayfaya Dön</a>
             </div>
         </form>
-        </div>
-    </main><br><br>
+    </div>
+    </div>
+    <br><br>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
@@ -125,7 +127,7 @@
                 });
         }
     </script>
-    <hr class="divider">
+    <hr style="margin-bottom: 90px;" class="divider">
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -133,11 +135,14 @@
             © 2025 - Telif Hakları
             <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.
         </p>
-        <div class="footer-icons" style="font-size:20px; ">
+        <div class="footer-icons">
             <a href="https://github.com/Codelomi" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" class="icon" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/codelomi.xyz" class="icon" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/codelomixyz/" class="icon" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
