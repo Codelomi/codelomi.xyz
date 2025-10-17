@@ -16,6 +16,64 @@ a {
     color: rgb(0, 255, 21);
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    background-color: rgba(220, 220, 220, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 9px 9px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Yazıyı ortada tut */
+    gap: 15px;
+    box-shadow: 4px -3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+/* Footer link */
+.footer-link {
+    text-decoration: none;
+    color: rgb(27, 128, 88);
+    transition: color 0.3s ease-out;
+}
+
+.footer-link:hover {
+    color: rgb(0, 16, 110);
+}
+
+/* Yazı */
+.footer-text {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+
+/* İkonlar solda */
+.footer-icons {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* İkon stilleri */
+.footer-icons .icon {
+    color: #000;
+    font-size: 20px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icons .icon:hover {
+    color: rgb(0, 110, 66);
+    transform: scale(1.15);
+}
+
 /* ÜST BAR */
 .site-header {
     width: 90%;
@@ -32,7 +90,7 @@ a {
     padding: 10px 20px;
     z-index: 1000;
     transition: all 0.3s ease;
-    box-shadow: 4px 5px 8px;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.3);
     color: black;
 }
 
@@ -104,65 +162,7 @@ a {
     }
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    background-color: rgba(220, 220, 220, 0.5);
-    backdrop-filter: blur(5px);
-    border-radius: 9px 9px 0 0;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Yazıyı ortada tut */
-    gap: 15px;
-    box-shadow: 4px -3px 8px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    transition: all 0.3s ease;
-}
 
-/* Footer link */
-.footer-link {
-    text-decoration: none;
-    color: rgb(27, 128, 88);
-    transition: color 0.3s ease-out;
-}
-
-.footer-link:hover {
-    color: rgb(0, 16, 110);
-}
-
-/* Yazı */
-.footer-text {
-    flex: 1;
-    text-align: center;
-    font-size: 16px;
-    color: #000;
-}
-
-/* İkonlar solda */
-.footer-icons {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* İkon stilleri */
-.footer-icons .icon {
-    color: #000;
-    font-size: 20px;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.footer-icons .icon:hover {
-    color: rgb(0, 110, 66);
-    transform: scale(1.15);
-}
 
 /* ------------------ RESPONSIVE TASARIM ------------------ */
 /* Tablet boyutları */
@@ -266,7 +266,6 @@ p {
     width: 90%;
     background-color: #1b1414;
     border-left: 5px solid rgb(0, 179, 255);
-    border-right: 5px solid rgb(0, 110, 66);
     border-radius: 10px;
     padding: 20px 25px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -279,6 +278,16 @@ p {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
+.yazi-1 img {
+    width: 15%;
+    margin-left: 1%;
+    height: auto;
+}
+
+.yazi-1 strong {
+    font-size: 30px;
+    margin-left: 10px; /* Yazı ile fotoğraf arasındaki boşluk */
+}
 /* YAZI METNİ */
 .anametin {
     font-size: 20px;
@@ -777,7 +786,7 @@ h5 {
     margin-top: -15px;
     transition: transform 0.3s ease;
     margin-bottom: -100px;
-    padding-bottom:-130px;
+    padding-bottom: -130px;
 }
 
 .card:hover {
