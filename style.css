@@ -411,6 +411,7 @@ p {
     transition: border 0.3s ease, box-shadow 0.3s ease;
     background-color: transparent;
     margin-right: 1%;
+    color: #00ff00;
 }
 
 .form-input:focus,
