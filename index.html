@@ -21,6 +21,8 @@
             <a href="blog.html"><button class="nav-button">Projeler & Blog</button></a>
             <a href="hakkimda.html"><button class="nav-button">Hakkımda</button></a>
             <a href="contact.html"><button class="nav-button">İletişim</button></a>
+            <button class="nav-button" onclick="DarkMode()" id="darkMode">🌙</button>
+            <script src="theme.js"></script>
         </div>
     </header><br><br><br><br>
     <hr class="divider">
@@ -38,7 +40,6 @@
             <p>Sosyal medya platformlarında arkadaşlarım bana "AntiVirüs" lakabını taktı. Başta şaka maka derken,
                 zamanla bu isim bana uygun düştü ve ben de onlara ayak uydurdum. Ne yapalım, dünyaya bir kez gelmişiz -
                 illa insan üzmeye değer mi? Hayatı pozitif yaşamak en iyisi!</p>
-                <small>Bu arada Siteyi tasarlarken Daha çok bilgisayar odaklı tasarladım o yüzden telefondan siteye bakanlar için özür dilerim. İyi  Okumlar</small>
         </div>
 
         <div class="card">
@@ -65,7 +66,7 @@
     </div>
     <br>
     <hr style="margin-bottom: 90px;" class="divider">
-    
+
     <footer class="site-footer">
         <p class="footer-text">
             © 2025 - Telif Hakları
@@ -73,7 +74,8 @@
         </p>
         <div class="footer-icons" style="font-size:20px; ">
             <a href="https://github.com/Codelomi" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" class="icon" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
             <a href="https://instagram.com/codelomi.xyz" class="icon" target="_blank"><i
                     class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/codelomixyz/" class="icon" target="_blank"><i
@@ -111,6 +113,7 @@
         const rastgeleIndex = Math.floor(Math.random() * sozler.length);
         sozElementi.textContent = sozler[rastgeleIndex];
     </script>
+    
 </body>
 
 </html>

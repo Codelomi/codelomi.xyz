@@ -1,18 +1,27 @@
-const checkbox = document.getElementById("checkbox");
+let dark = false;
 
-// Sayfa açıldığında daha önce seçilmiş tema varsa uygula
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
-  checkbox.checked = true;
+function DarkMode() {
+    dark = !dark;
+
+    if (dark) {
+        document.body.style.backgroundImage = "linear-gradient(to right, black, black ,green,#671a74ff)";
+        document.getElementById("darkMode").innerText = "🔥"
+    } else {
+        document.body.style.backgroundImage = "linear-gradient(to right,  #671a74ff, #9c27b0,green, black)";
+        document.getElementById("darkMode").innerText = "🌙"
+    }
+
+    localStorage.setItem("darkMode", dark)
+    
 }
 
-// Toggle olunca tema değiştir
-checkbox.addEventListener("change", () => {
-  if (checkbox.checked) {
-    document.body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.body.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
-});
+window.onload = function () {
+    dark = localStorage.getItem("darkMode") === "true"; // önce değeri al
+    if (dark) {
+        document.body.style.backgroundImage = "linear-gradient(to right, black, black ,green, #671a74ff)";
+        document.getElementById("darkMode").innerText = "🔥";
+    } else {
+        document.body.style.backgroundImage = "linear-gradient(to right,  #671a74ff,  #9c27b0,green, black)";
+        document.getElementById("darkMode").innerText = "🌙";
+    }
+} 

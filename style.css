@@ -6,8 +6,8 @@
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: linear-gradient(90deg, #132440, #16476A, #3B9797);
     color: #00FF00;
+    transition: background-image 0.8s ease-in-out, color 0.5s ease;
 }
 
 /* GENEL LİNK STİLİ */
@@ -286,8 +286,10 @@ p {
 
 .yazi-1 strong {
     font-size: 30px;
-    margin-left: 10px; /* Yazı ile fotoğraf arasındaki boşluk */
+    margin-left: 10px;
+    /* Yazı ile fotoğraf arasındaki boşluk */
 }
+
 /* YAZI METNİ */
 .anametin {
     font-size: 20px;
@@ -363,11 +365,11 @@ p {
 .form-input,
 .form-textarea {
     padding: 10px 12px;
-    border: 2px solid rgb(0, 110, 66);
+    border: 2px solid rgb(1, 255, 153);
     border-radius: 8px;
     font-size: 16px;
     transition: border 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgb(34, 65, 70);
+    background-color: transparent;
     margin-right: 1%;
 }
 
