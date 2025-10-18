@@ -8,6 +8,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Foto/1codelomi.png">
+    <style>
+        /* Genel body yazı boyutu */
+body, p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Başlıklar */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+/* Mobil (768px altı) */
+@media (max-width: 768px) {
+    body, p {
+        font-size: 16px;  /* yazı boyutu küçülür */
+        padding: 0 10px;  /* sağ-sol boşluk ekle */
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .cards-grid {
+        gap: 15px; /* kartlar arasındaki boşluğu azalt */
+        margin-bottom: 1px;
+    }
+
+    .card {
+        padding: 20px;
+        margin-bottom:50px ;
+    }
+
+    .yazilar p {
+        font-size: 22px; /* mobilde orta boyutlu */
+    }
+}
+
+/* Küçük ekranlar (480px altı) */
+@media (max-width: 480px) {
+    body, p {
+        font-size: 14px; 
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .yazilar p {
+        font-size: 18px;
+    }
+
+    .cards-grid {
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+    </style>
 
 </head>
 
@@ -16,13 +94,21 @@
         <a href="index.html">
             <div class="site-title">CodeLomi.xyz</div>
         </a>
-        <div class="nav-buttons">
+
+        <!-- Hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <!-- Normal nav-buttons -->
+        <div class="nav-buttons" id="navMenu">
             <a href="index.html"><button class="nav-button">Ana Sayfa</button></a>
             <a href="blog.html"><button class="nav-button">Projeler & Blog</button></a>
             <a href="hakkimda.html"><button class="nav-button">Hakkımda</button></a>
             <a href="contact.html"><button class="nav-button">İletişim</button></a>
             <button class="nav-button" onclick="DarkMode()" id="darkMode">🌙</button>
             <script src="theme.js"></script>
+            <script src="header.js"></script>
         </div>
     </header><br><br><br><br>
     <hr class="divider">
@@ -113,7 +199,7 @@
         const rastgeleIndex = Math.floor(Math.random() * sozler.length);
         sozElementi.textContent = sozler[rastgeleIndex];
     </script>
-    
+
 </body>
 
 </html>
