@@ -10,81 +10,94 @@
     <link rel="icon" href="Foto/1codelomi.png">
     <style>
         /* Genel body yazı boyutu */
-body, p {
-    font-size: 18px;
-    line-height: 1.6;
-}
+        body,
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
-/* Başlıklar */
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-}
+        /* Başlıklar */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.2;
+        }
 
-/* Mobil (768px altı) */
-@media (max-width: 768px) {
-    body, p {
-        font-size: 16px;  /* yazı boyutu küçülür */
-        padding: 0 10px;  /* sağ-sol boşluk ekle */
-    }
+        /* Mobil (768px altı) */
+        @media (max-width: 768px) {
 
-    h1 {
-        font-size: 22px;
-    }
+            body,
+            p {
+                font-size: 16px;
+                /* yazı boyutu küçülür */
+                padding: 0 10px;
+                /* sağ-sol boşluk ekle */
+            }
 
-    h2 {
-        font-size: 20px;
-    }
+            h1 {
+                font-size: 22px;
+            }
 
-    h3 {
-        font-size: 18px;
-    }
+            h2 {
+                font-size: 20px;
+            }
 
-    .cards-grid {
-        gap: 15px; /* kartlar arasındaki boşluğu azalt */
-        margin-bottom: 1px;
-    }
+            h3 {
+                font-size: 18px;
+            }
 
-    .card {
-        padding: 20px;
-        margin-bottom:50px ;
-    }
+            .cards-grid {
+                gap: 15px;
+                /* kartlar arasındaki boşluğu azalt */
+                margin-bottom: 1px;
+            }
 
-    .yazilar p {
-        font-size: 22px; /* mobilde orta boyutlu */
-    }
-}
+            .card {
+                padding: 20px;
+                margin-bottom: 50px;
+            }
 
-/* Küçük ekranlar (480px altı) */
-@media (max-width: 480px) {
-    body, p {
-        font-size: 14px; 
-    }
+            .yazilar p {
+                font-size: 22px;
+                /* mobilde orta boyutlu */
+            }
+        }
 
-    h1 {
-        font-size: 20px;
-    }
+        /* Küçük ekranlar (480px altı) */
+        @media (max-width: 480px) {
 
-    h2 {
-        font-size: 18px;
-    }
+            body,
+            p {
+                font-size: 14px;
+            }
 
-    h3 {
-        font-size: 16px;
-    }
+            h1 {
+                font-size: 20px;
+            }
 
-    .yazilar p {
-        font-size: 18px;
-    }
+            h2 {
+                font-size: 18px;
+            }
 
-    .cards-grid {
-        gap: 10px;
-    }
+            h3 {
+                font-size: 16px;
+            }
 
-    .card {
-        padding: 15px;
-    }
-}
+            .yazilar p {
+                font-size: 18px;
+            }
 
+            .cards-grid {
+                gap: 10px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
     </style>
 
 </head>
@@ -150,7 +163,47 @@ h1, h2, h3, h4, h5, h6 {
             style=" text-align: center; color: #3add5b; text-shadow: 0 0 2px rgba(100, 255, 141, 0.653);transition: all 0.3s ease-in-out;">
             Söz yükleniyor...</p>
     </div>
-    <br>
+    <br><br>
+    <div class="amac">
+        <div class="amac-text">
+            <h3>Yazılım & Gelişim</h3>
+            <ul>
+                <li>Yazılımı sadece öğrenmek değil, yaşam tarzı haline getirmek.</li>
+                <li>Her satır kodda kendi imzamı bırakmak; tamamen kendi emeğimle üretmek.</li>
+                <li>Python, HTML, CSS ve JavaScript ile sağlam bir temel oluşturmak.</li>
+                <li>Yeni teknolojiler öğrenerek sürekli gelişmek ve disiplinli kalmak.</li>
+            </ul>
+        </div>
+
+        <div class="baslik-divider"></div>
+
+        <div class="amac-text">
+            <h3>Projeler & Hedefler</h3>
+            <ul>
+                <li>Görüntü işleme tabanlı projeler geliştirerek yapay zekâ ile insan etkileşimini güçlendirmek.</li>
+                <li>TÜBİTAK 4006 ve 2204 projeleriyle gerçek dünyaya dokunan sistemler sunmak.</li>
+                <li>Uzun vadede C/C# öğrenerek Linux çekirdeği tabanlı işletim sistemi geliştirmek.</li>
+                <li>Her projemde güvenlik, verimlilik ve yenilikçiliği ön planda tutmak.</li>
+            </ul>
+        </div>
+
+        <div class="baslik-divider"></div>
+
+        <div class="amac-text">
+            <h3>Paylaşım & Topluluk</h3>
+            <ul>
+                <li>Blog sayfasında deneyimlerimi, teknik detayları ve proje süreçlerini paylaşmak.</li>
+                <li>Yazılım ve siber güvenlik alanında öğrendiklerimi aktararak gelişime katkı sağlamak.</li>
+                <li>Bilgi paylaşımını bir kültür haline getirmek — çünkü gerçek güç bilgiyi saklamakta değil,
+                    paylaşmaktadır.</li>
+                <li>AntiVirüs / CodeLomi.xyz markasını “gerçek bilgi ve dürüstlük” üzerine inşa etmek.</li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
     <hr style="margin-bottom: 90px;" class="divider">
 
     <footer class="site-footer">
@@ -199,7 +252,6 @@ h1, h2, h3, h4, h5, h6 {
         const rastgeleIndex = Math.floor(Math.random() * sozler.length);
         sozElementi.textContent = sozler[rastgeleIndex];
     </script>
-
 </body>
 
 </html>
