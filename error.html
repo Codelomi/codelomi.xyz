@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLomi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="Foto/1codelomi.png" type="image/png">
+    <style>
+        .error {
+            background-color: rgba(197, 12, 12, 0.812);
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15%;
+            width: 50%;
+            height: auto;
+            margin-left: 24%;
+            border-radius: 12px;
+            padding: 8px;
+            border-left: 8px solid rgb(30, 134, 252);
+            text-align: center;
+        }
+
+        .error p b {
+            color: greenyellow;
+            font: optional;
+            font-size: 25px;
+        }
+
+        .fab-error i {
+            font-size: 100px;
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+            margin-bottom: -200px;
+            margin-right: 16px;
+        }
+
+        .countdown p {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(90deg, red, purple, red);
+            -webkit-background-clip: text;
+            /* Chrome, Safari */
+            background-clip: text;
+            /* Standart */
+            color: transparent;
+            /* Yazının rengi gizlenir */
+            -webkit-text-fill-color: transparent;
+            /* WebKit tabanlı tarayıcılar için */
+            text-align: center;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html">
+            <div class="site-title">CodeLomi.xyz</div>
+        </a>
+
+        <!-- Hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <!-- Normal nav-buttons -->
+        <div class="nav-buttons" id="navMenu">
+            <a href="index.html"><button class="nav-button">Ana Sayfa</button></a>
+            <a href="blog.html"><button class="nav-button">Projeler & Blog</button></a>
+            <a href="hakkimda.html"><button class="nav-button">Hakkımda</button></a>
+            <a href="contact.html"><button class="nav-button">İletişim</button></a>
+            <button class="nav-button" onclick="DarkMode()" id="darkMode">🌙</button>
+            <script src="theme.js"></script>
+            <script src="header.js"></script>
+        </div>
+    </header><br><br><br><br>
+
+    <div class="fab-error"><i class="fa-solid fa-triangle-exclamation"></i></div>
+    <div class="error">
+
+        <p>
+            <b>Hata : </b> E-mail Gönderilemedi Lütfen tarayıcınızı Veya İnternetinizi kontrol edin
+        </p>
+    </div>
+    <div class="countdown">
+        <p id="countdown">10</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let t = 10;
+            const el = document.getElementById('countdown');
+            const timer = setInterval(() => {
+                t--;
+                if (el) el.textContent = t.toString();
+                if (t <= 0) {
+                    clearInterval(timer);
+                    // window.location.href = 'contact.html'; // geri tuşunu korur
+                    window.location.replace('contact.html'); // geri tuşuyla geri dönmeyi engeller
+                }
+            }, 1000);
+        });
+    </script>
+
+
+    <footer class="site-footer">
+        <p class="footer-text">
+            © 2025 - Telif Hakları
+            <a class="footer-link" href="https://instagram.com/codelomi.xyz" target="_blank">CodeLomi'e Aittir</a>.
+        </p>
+        <div class="footer-icons" style="font-size:20px; ">
+            <a href="https://github.com/Codelomi" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://youtube.com/channel/UCMYRMjKor56P_myxWtpZXew/" class="icon" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/codelomi.xyz" class="icon" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/codelomixyz/" class="icon" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -100,6 +100,11 @@ footer {
     font-size: 25px;
     font-weight: bold;
     color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.site-title:hover {
+    color: #0046FF;
 }
 
 /* NAV BUTONLAR */
@@ -119,8 +124,7 @@ footer {
 }
 
 .nav-button:hover {
-    transform: scale(1.1);
-    color: rgb(0, 110, 66);
+    color: rgb(37, 228, 53);
 }
 
 /* ANA İÇERİK */
