@@ -109,20 +109,19 @@
         </a>
 
         <!-- Hamburger icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
-        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
 
         <div class="nav-buttons" id="navMenu">
             <a href="index.html"><button class="nav-button">cd /home</button></a>
             <a href="blog.html"><button class="nav-button">ls /projeler</button></a>
             <a href="sayitahmin.html"><button class="nav-button">whoami</button></a>
             <a href="contact.html"><button class="nav-button">ping admin</button></a>
-            <button class="nav-button" onclick="DarkMode()" id="darkMode">🌙</button>
-            <script src="theme.js"></script>
+            <button class="nav-button" id="darkModeBtn">🌙</button>
             <script src="header.js"></script>
+            <script src="theme.js"></script>
         </div>
     </header><br><br><br><br>
+
     <hr class="divider">
 
     <div class="cards-grid">
@@ -147,9 +146,7 @@
                 <span style="text-align: center; margin-right: 5%;" class="status">Siber Güvenlik Adayı</span>
             </div>
 
-            <div class="card">
-                <p></p>
-            </div>
+            <br><br><br>
         </div>
     </div><br><br>
     <div class="yazilar">
@@ -199,6 +196,101 @@
             </ul>
         </div>
     </div>
+    <!-- 1) Hidden form (body içinde, uygun bir yere yapıştır) -->
+    <form id="weeklyReportForm" style="display:none;">
+        <input type="text" name="totalPageviews" id="totalPageviews">
+        <input type="text" name="uniqueVisitors" id="uniqueVisitors">
+        <input type="text" name="averageDuration" id="averageDuration">
+        <input type="text" name="siteUrl" id="siteUrl">
+        <input type="text" name="generatedAt" id="generatedAt">
+    </form>
+
+    <!-- Manuel gönderim için buton (isteğe bağlı, test için) -->
+    <!-- <button id="sendReportBtn">Haftalık Raporu Gönder</button> -->
+
+    <!-- 2) EmailJS + tracking script (body kapanmadan önce yapıştır) -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            // EmailJS init
+            emailjs.init("sQVK3W9J-IfjY-dlp"); // kendi userID
+            const EMAILJS_SERVICE = 'service_6dcj24r';
+            const EMAILJS_TEMPLATE = 'template_atccmms';
+
+            // Session ve localStorage için keyler
+            const LS_KEY = 'site_traffic_week';
+            const sessionIdKey = 'site_session_id';
+            const startKey = 'site_session_start';
+
+            // session id ve başlangıç zamanı
+            if (!sessionStorage.getItem(sessionIdKey)) {
+                sessionStorage.setItem(sessionIdKey, 's_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8));
+                sessionStorage.setItem(startKey, String(Date.now()));
+            }
+            const sessionId = sessionStorage.getItem(sessionIdKey);
+            const sessionStart = Number(sessionStorage.getItem(startKey));
+
+            // Haftalık veri yükleme
+            let weekData = { pageviews: 0, uniqueSessions: {}, totalDuration: 0 };
+            try {
+                const raw = localStorage.getItem(LS_KEY);
+                if (raw) weekData = JSON.parse(raw);
+            } catch (e) { }
+
+            // Pageview ve session işaretleme
+            weekData.pageviews = (weekData.pageviews || 0) + 1;
+            weekData.uniqueSessions = weekData.uniqueSessions || {};
+            weekData.uniqueSessions[sessionId] = true;
+
+            localStorage.setItem(LS_KEY, JSON.stringify(weekData));
+
+            // Rapor verisi oluştur
+            function buildReportPayload() {
+                const durationMs = Math.max(0, Date.now() - sessionStart);
+                const totalDurationMs = (weekData.totalDuration || 0) + durationMs;
+
+                const totalPageviews = weekData.pageviews || 0;
+                const uniqueVisitors = Object.keys(weekData.uniqueSessions || {}).length;
+
+                return {
+                    totalPageviews: String(totalPageviews),
+                    uniqueVisitors: String(uniqueVisitors),
+                    averageDuration: String(Math.round((totalDurationMs / Math.max(1, uniqueVisitors)) / 1000)),
+                    siteUrl: location.origin + location.pathname,
+                    generatedAt: new Date().toISOString()
+                };
+            }
+
+            // EmailJS ile gönderim
+            function sendWeeklyReport() {
+                const sessionDuration = Math.max(0, Date.now() - sessionStart);
+                weekData.totalDuration = (weekData.totalDuration || 0) + sessionDuration;
+                localStorage.setItem(LS_KEY, JSON.stringify(weekData));
+
+                const payload = buildReportPayload();
+                const form = document.getElementById('weeklyReportForm');
+                form.totalPageviews.value = payload.totalPageviews;
+                form.uniqueVisitors.value = payload.uniqueVisitors;
+                form.averageDuration.value = payload.averageDuration;
+                form.siteUrl.value = payload.siteUrl;
+                form.generatedAt.value = payload.generatedAt;
+
+                emailjs.sendForm(EMAILJS_SERVICE, EMAILJS_TEMPLATE, form)
+                    .then(() => console.log('Weekly report sent.'))
+                    .catch(err => console.error('EmailJS error:', err));
+            }
+
+            // Opsiyonel: manuel buton ile tetikleme
+            const btn = document.getElementById('sendReportBtn');
+            if (btn) btn.addEventListener('click', sendWeeklyReport);
+
+            // Global olarak erişilebilir yap
+            window.sendWeeklyReport = sendWeeklyReport;
+
+        })();
+    </script>
+
+
 
     <br><br><br>
 
