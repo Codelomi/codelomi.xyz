@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CodeLomi | Tahmin Oyunu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Foto/1codelomi.png">
+
+    <style>
+        /* TEMA SADECE .sayi-body İÇİN GEÇERLİ */
+        .sayi-body {
+            --bg: #000;
+            --panel: #071212;
+            --glow: #00ff77;
+            --muted: #66ff99;
+
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: radial-gradient(ellipse at center, #001210 0%, #000 60%);
+            color: var(--muted);
+            font-family: "Courier New", monospace;
+        }
+
+        .sayi-card {
+            width: 320px;
+            padding: 22px;
+            background: linear-gradient(180deg, rgba(7, 18, 18, 0.9), rgba(0, 0, 0, 0.6));
+            border: 1px solid rgba(0, 255, 119, 0.12);
+            box-shadow: 0 6px 30px rgba(0, 255, 119, 0.04), 0 0 30px rgba(0, 255, 119, 0.06) inset;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .sayi-card h1 {
+            margin: 0 0 12px 0;
+            color: var(--glow);
+            font-size: 18px;
+        }
+
+        .sayi-card input[type=number] {
+            width: 100%;
+            padding: 8px 10px;
+            background: transparent;
+            border: 1px solid rgba(0, 255, 119, 0.12);
+            color: var(--muted);
+            font-size: 16px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .sayi-card button {
+            width: 100%;
+            padding: 10px;
+            font-family: inherit;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid rgba(0, 255, 119, 0.14);
+            background: linear-gradient(180deg, rgba(0, 255, 119, 0.06), rgba(0, 255, 119, 0.02));
+            color: var(--glow);
+            transition: all 0.2s;
+        }
+
+        .sayi-card button:hover {
+            border-color: var(--glow);
+            box-shadow: 0 0 6px rgba(0, 255, 119, 0.3);
+        }
+
+        .sayi-log {
+            margin-top: 12px;
+            text-align: left;
+            font-size: 13px;
+            color: #99ffbb;
+            max-height: 120px;
+            overflow: auto;
+            padding: 8px;
+            border: 1px dashed rgba(0, 255, 119, 0.06);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .sayi-small {
+            font-size: 12px;
+            color: #77ffb0;
+            margin-top: 8px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1 );
+            /* 0.85 yerine 0.35 yaptık */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .modal-content {
+            background: #071212;
+            border: 2px solid #00ff77;
+            border-radius: 12px;
+            padding: 25px 20px;
+            width: 320px;
+            text-align: center;
+            color: #66ff99;
+            font-family: "Courier New", monospace;
+            box-shadow: 0 0 20px rgba(0, 255, 119, 0.4), 0 0 60px rgba(0, 255, 119, 0.2) inset;
+            transform: translateY(-50px) scale(0.7);
+            opacity: 0;
+            transition: all 0.35s ease;
+        }
+
+        .modal-overlay.active {
+            pointer-events: all;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            animation: glowPulse 1s infinite alternate;
+        }
+
+        .modal-header h2 {
+            margin: 0 0 10px;
+            color: #00ff77;
+            text-shadow: 0 0 10px #00ff77, 0 0 20px #00ff77;
+        }
+
+        .modal-body p {
+            margin: 10px 0;
+        }
+
+        .modal-footer button {
+            padding: 10px 20px;
+            border: 1px solid #00ff77;
+            background: transparent;
+            color: #00ff77;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .modal-footer button:hover {
+            background: rgba(0, 255, 119, 0.15);
+            box-shadow: 0 0 10px #00ff77;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                box-shadow: 0 0 20px #00ff77, 0 0 60px #00ff77 inset;
+            }
+
+            100% {
+                box-shadow: 0 0 40px #00ff77, 0 0 80px #00ff77 inset;
+            }
+        }
+    </style>
+</head>
+
+<body class="sayi-body">
+    <header class="site-header">
+        <a href="index.html">
+            <div class="site-title">CodeLomi.xyz</div>
+        </a>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <div class="nav-buttons" id="navMenu">
+            <a href="index.html"><button class="nav-button">cd /home</button></a>
+            <a href="blog.html"><button class="nav-button">ls /projeler</button></a>
+            <a href="sayitahmin.html"><button class="nav-button">whoami</button></a>
+            <a href="contact.html"><button class="nav-button">ping admin</button></a>
+            <button class="nav-button" onclick="DarkMode()" id="darkMode">🌙</button>
+            <script src="header.js"></script>
+        </div>
+    </header>
+
+    <div class="sayi-card">
+        <h1>Hakkımda bilgi edinmek istiyorsan önce tahmin oyununu geç! (1 - 10)</h1>
+
+        <input id="tahmin" type="number" min="1" max="10" placeholder="1-10 arası sayı gir">
+        <button id="buton">Tahmin Et</button>
+        <button id="yeni" style="margin-top:8px;">Yeni Oyun (Sıfırla)</button>
+
+        <div class="sayi-small" id="durum">Durum: Beklemede</div>
+        <div class="sayi-log" id="log"></div>
+    </div>
+    <!-- Edex-UI tarzı modal -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎯 Tebrikler!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Doğru tahmin yaptınız.</p>
+                <p id="attemptCount"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="modalOkBtn">Tamam</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const LS_KEY = 'ht_secret_v1';
+        const LS_ATT = 'ht_attempts_v1';
+        const logEl = document.getElementById('log');
+        const durumEl = document.getElementById('durum');
+        const tahminInput = document.getElementById('tahmin');
+        const buton = document.getElementById('buton');
+        const yeniBtn = document.getElementById('yeni');
+
+        const modal = document.getElementById('successModal');
+        const attemptCountEl = document.getElementById('attemptCount');
+        const modalOkBtn = document.getElementById('modalOkBtn');
+
+        function getSecret() {
+            let s = localStorage.getItem(LS_KEY);
+            if (!s) s = createNewSecret();
+            return Number(s);
+        }
+
+        function createNewSecret() {
+            const n = Math.floor(Math.random() * 10) + 1;
+            localStorage.setItem(LS_KEY, n);
+            localStorage.setItem(LS_ATT, 0);
+            appendLog('Yeni gizli sayı üretildi.');
+            updateDurum('Yeni oyun hazır.');
+            return n;
+        }
+
+        function clearSecret() {
+            localStorage.removeItem(LS_KEY);
+            localStorage.removeItem(LS_ATT);
+        }
+
+        function appendLog(text) {
+            const t = `[${new Date().toLocaleTimeString()}] ${text}`;
+            logEl.innerHTML = t + '<br>' + logEl.innerHTML;
+        }
+
+        function incAttempt() {
+            let a = Number(localStorage.getItem(LS_ATT) || 0);
+            a++;
+            localStorage.setItem(LS_ATT, a);
+            return a;
+        }
+
+        function updateDurum(text) {
+            durumEl.textContent = 'Durum: ' + text;
+        }
+
+        let secret = getSecret();
+        appendLog('Uygulama başlatıldı. (Sayı: gizli)');
+
+        buton.addEventListener('click', () => {
+            const guess = Number(tahminInput.value);
+            if (!guess || guess < 1 || guess > 10) {
+                updateDurum('1-10 arası sayı girin.');
+                return;
+            }
+
+            const attempts = incAttempt();
+            appendLog(`Tahmin: ${guess} (Deneme ${attempts})`);
+
+            secret = getSecret();
+            if (guess === secret) {
+                appendLog('✅ Doğru tahmin!');
+                updateDurum(`Doğru! ${attempts} denemede buldunuz.`);
+
+                // Modal aç ve animasyonu tetikle
+                attemptCountEl.textContent = `${attempts} denemede buldunuz.`;
+                modal.classList.add('active');
+
+                // Tamam butonuna basınca modal kapanır ve yönlendirme yapılır
+                modalOkBtn.onclick = () => {
+                    modal.classList.remove('active');
+                    setTimeout(() => { // animasyonun bitmesi için küçük delay
+                        createNewSecret();
+                        tahminInput.value = '';
+                        window.location.href = 'hakkimda.html';
+                    }, 300);
+                };
+
+            } else {
+                appendLog('✖ Yanlış.');
+                updateDurum(guess < secret ? 'Daha büyük sayı gir.' : 'Daha küçük sayı gir.');
+            }
+        });
+
+        yeniBtn.addEventListener('click', () => {
+            clearSecret();
+            secret = getSecret();
+            appendLog('Yeni oyun başlatıldı.');
+            updateDurum('Yeni oyun oluşturuldu.');
+            tahminInput.value = '';
+        });
+    </script>
+
+
+
+</body>
+
+</html>
